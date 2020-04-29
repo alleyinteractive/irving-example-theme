@@ -1,0 +1,27 @@
+{
+  "name": "irving-example-theme",
+  "version": "1.0.0",
+  "description": "Example Irving Theme.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "irving dev",
+    "build": "irving build",
+    "start": "irving start",
+    "styleguide:dev": "BABEL_ENV=app NODE_ENV=production npx styleguidist build --config ./config/styleguide.config.js",
+    "styleguide:build": "BABEL_ENV=app NODE_ENV=production npx styleguidist build --config ./config/styleguide.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:alleyinteractive/irving-example-theme.git"
+  },
+  "author": "Alley",
+  "license": "ISC",
+  "dependencies": {
+    "@irvingjs/core": "^2.6.0-rc.0",
+    "@irvingjs/styled": "^2.0.0",
+    "@irvingjs/styleguide": "^2.1.2",
+    "@material-ui/core": "^4.9.12",
+    "@wordpress/block-library": "^2.16.1",
+    "classnames": "^2.2.6"
+  }
+}
