@@ -6,10 +6,10 @@ import HTML from 'example-components/elements/rawHTML';
 import Link from 'example-components/elements/link';
 import Stack from 'example-components/layouts/stack';
 import PostCard from 'example-components/cards/post';
+// import Button from '@wordpress/block-library/src/button/save';
 import * as materialComponents from '@material-ui/core';
 
 const mapping = {
-  app: App,
   'core/column': Container,
   'core/columns': Container,
   'core/group': Container,
@@ -17,19 +17,20 @@ const mapping = {
   'core/paragraph': HTML,
   'core/post-content': HTML,
   'irving/admin-bar': Container,
-  'irving/body-area': Container,
+  'irving/body-wrapper': Container,
   'irving/container': Container,
   'irving/footer': Footer,
-  'irving/footer-area': Container,
+  'irving/footer-wrapper': Container,
   'irving/head': Container,
-  'irving/head-area': Container,
   'irving/header': Header,
-  'irving/header-area': Container,
+  'irving/header-wrapper': Container,
   'irving/html': HTML,
   'irving/link': Link,
   'irving/post-card': PostCard,
   'irving/stack': Stack,
   'irving/team-card': Container,
+  // 'core/button': Button,
+  app: App,
 };
 
 Object.keys(materialComponents).forEach((index) => {

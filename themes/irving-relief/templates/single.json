@@ -1,0 +1,94 @@
+{
+	"page": [
+		{
+			"name": "irving/body-wrapper",
+			"children": [
+				{
+					"name": "irving/container",
+					"config": {
+						"themeName": "themeWidth"
+					},
+					"children": [
+						{
+							"name": "irving/stack",
+							"children": [
+								{
+									"name": "irving/breadcrumbs"
+								},
+								{
+									"name": "irving/heading",
+									"config": {
+										"tag": "h1"
+									},
+									"children": [
+										{
+											"name": "irving/post-title"
+										}
+									]
+								},
+								{
+									"name": "irving/featured-media"
+								},
+								{
+									"name": "irving/container",
+									"config": {
+										"themeName": "contentWidth"
+									},
+									"children": [
+										{
+											"name": "irving/post-byline",
+											"config": {
+												"themeName": "inline"
+											}
+										},
+										{
+											"name": "irving/post-content",
+											"config": {
+												"themeName": "body"
+											}
+										},
+										{
+											"name": "irving/post-tags",
+											"config": {
+												"themeName": "inline"
+											}
+										},
+										{
+											"name": "irving/post-social-sharing",
+											"config": {
+												"themeName": "inline"
+											}
+										},
+										{
+											"name": "irving/related-stories"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "irving-relief/donate",
+					"config": {
+						"themeName": "orange"
+					}
+				},
+				{
+					"name": "irving/container",
+					"config": {
+						"themeName": "themeWidth"
+					},
+					"children": [
+						{
+							"name": "irving/the-latest"
+						}
+					]
+				},
+				{
+					"name": "irving-relief/recieve-alerts"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,3 @@
+[submodule "plugins/wp-irving"]
+	path = plugins/wp-irving
+	url = https://github.com/alleyinteractive/wp-irving.git

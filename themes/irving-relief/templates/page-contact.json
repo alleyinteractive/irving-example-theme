@@ -1,0 +1,84 @@
+{
+	"page": [
+		{
+			"name": "irving/body-wrapper",
+			"children": [
+				{
+					"name": "irving/container",
+					"config": {
+						"themeName": "themeWidth"
+					},
+					"children": [
+						{
+							"name": "irving/stack",
+							"children": [
+								{
+									"name": "irving/post-title",
+									"config": {
+										"tag": "h1",
+										"themeName": "hr"
+									}
+								},
+								{
+									"name": "irving/columns",
+									"children": [
+										{
+											"name": "irving/column",
+											"config": {
+												"width": 4
+											},
+											"children": [
+												{
+													"name": "irving/heading",
+													"config": {
+														"tag": "h2"
+													},
+													"children":[
+														{
+															"__": "Call. Write. Visit."
+														}
+													]
+												},
+												{
+													"name": "irving/paragraph",
+													"children": [
+														{
+															"__": "Reach Direct Relief by Phone, Email, or Standard Mail"
+														}
+													]
+												}
+											]
+										}
+										{
+											"name": "irving/column",
+											"config": {
+												"width": 8
+											},
+											"children": [
+												{
+													"name": "irving/featured-image",
+													"config": {
+														"themeName": "16x9"
+													}
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "irving/stack",
+									"config": {
+
+									},
+									"children": {
+
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

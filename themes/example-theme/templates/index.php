@@ -30,7 +30,7 @@
 
 	while ( $home_posts->have_posts() ) {
 		$home_posts->the_post();
-		include STYLESHEETPATH . '/template-parts/post-card.php';
+		include get_stylesheet_directory() . '/template-parts/post-card.php';
 	}
 	wp_reset_postdata();
 	?>

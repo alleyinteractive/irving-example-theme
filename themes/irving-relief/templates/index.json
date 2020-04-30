@@ -1,0 +1,24 @@
+{
+	"page": [
+		{
+			"name": "irving/body-wrapper",
+			"children": [
+				{
+					"name": "irving/sidebar",
+					"config": {
+						"themeName": "two-by-three"
+					}
+				},
+				{
+					"name": "irving/stack",
+					"config": {
+
+					},
+					"children": {
+
+					}
+				}
+			]
+		}
+	]
+}

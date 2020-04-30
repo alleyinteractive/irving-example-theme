@@ -1,0 +1,10 @@
+[
+	{
+		"name": "testing-array",
+		"children": [
+			{
+				"name": "irving/post-title"
+			}
+		]
+	}
+]

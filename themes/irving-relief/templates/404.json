@@ -1,0 +1,57 @@
+{
+	"page": [
+		{
+			"name": "irving/heading",
+			"config": {
+				"tag": "h1"
+			},
+			"children": [
+				{
+					"name": "bloginfo/name"
+				}
+			]
+		},
+		{
+			"name": "template-parts/testing"
+		},
+		{
+			"name": "irving/body-wrapper",
+			"children": [
+				{
+					"name": "irving/container",
+					"config": {
+						"themeName": "themeWidth"
+					},
+					"children": [
+						{
+							"name": "irving/stack",
+							"children": [
+								{
+									"name": "irving/heading",
+									"config": {
+										"tag": "h1"
+									},
+									"children": [
+										{ "__": "Oops! That page can’t be found." }
+									]
+								},
+								{
+									"name": "irving/heading",
+									"config": {
+										"tag": "p"
+									},
+									"children": [
+										{ "__": "It looks like nothing was found at this location. Maybe try a search?" }
+									]
+								},
+								{
+									"name": "irving-relief/search-bar"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
