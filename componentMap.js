@@ -4,12 +4,15 @@ import Footer from 'example-components/modules/footer';
 import Header from 'example-components/modules/header';
 import HTML from 'example-components/elements/rawHTML';
 import Link from 'example-components/elements/link';
+import Fragment from 'example-components/elements/fragment';
 import Stack from 'example-components/layouts/stack';
 import PostCard from 'example-components/cards/post';
 // import Button from '@wordpress/block-library/src/button/save';
 import * as materialComponents from '@material-ui/core';
 
 const mapping = {
+  '': Fragment,
+  'irving/passthrough': Fragment,
   'core/column': Container,
   'core/columns': Container,
   'core/group': Container,

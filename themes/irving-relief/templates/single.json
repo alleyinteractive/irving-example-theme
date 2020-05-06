@@ -6,87 +6,66 @@
 				{
 					"name": "irving/container",
 					"config": {
-						"themeName": "themeWidth"
+						"themeName": "contentWidth"
 					},
 					"children": [
 						{
-							"name": "irving/stack",
+							"name": "material/typography",
+							"config": {
+								"gutterBottom": true,
+								"variant": "h2",
+								"component": "h1"
+							},
+							"children": [
+								{ "name": "post/title" }
+							]
+						},
+						{
+							"name": "material/featured-media"
+						},
+						{
+							"name": "post/byline",
+							"config": {
+								"themeName": "inline"
+							}
+						},
+						{
+							"name": "post/content",
+							"config": {
+								"themeName": "body"
+							}
+						},
+						{
+							"name": "post/tags",
+							"config": {
+								"themeName": "inline"
+							}
+						},
+						{
+							"name": "post/social-sharing",
+							"config": {
+								"themeName": "inline"
+							}
+						},
+						{
+							"name": "material/grid",
+							"config": {
+								"container": true,
+								"spacing": 2
+							},
 							"children": [
 								{
-									"name": "irving/breadcrumbs"
-								},
-								{
-									"name": "irving/heading",
+									"name": "irving/wp_query",
 									"config": {
-										"tag": "h1"
+										"posts_per_page": 3
 									},
 									"children": [
-										{
-											"name": "irving/post-title"
-										}
-									]
-								},
-								{
-									"name": "irving/featured-media"
-								},
-								{
-									"name": "irving/container",
-									"config": {
-										"themeName": "contentWidth"
-									},
-									"children": [
-										{
-											"name": "irving/post-byline",
-											"config": {
-												"themeName": "inline"
-											}
-										},
-										{
-											"name": "irving/post-content",
-											"config": {
-												"themeName": "body"
-											}
-										},
-										{
-											"name": "irving/post-tags",
-											"config": {
-												"themeName": "inline"
-											}
-										},
-										{
-											"name": "irving/post-social-sharing",
-											"config": {
-												"themeName": "inline"
-											}
-										},
-										{
-											"name": "irving/related-stories"
-										}
+										{ "name": "template-parts/post-card" }
 									]
 								}
 							]
 						}
 					]
-				},
-				{
-					"name": "irving-relief/donate",
-					"config": {
-						"themeName": "orange"
-					}
-				},
-				{
-					"name": "irving/container",
-					"config": {
-						"themeName": "themeWidth"
-					},
-					"children": [
-						{
-							"name": "irving/the-latest"
-						}
-					]
-				},
-				{
-					"name": "irving-relief/recieve-alerts"
 				}
 			]
 		}

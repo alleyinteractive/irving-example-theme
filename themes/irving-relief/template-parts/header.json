@@ -1,0 +1,45 @@
+{
+	"name": "material/toolbar",
+	"config": {
+		"style": {
+			"background-color": "#EEE"
+		}
+	},
+	"children": [
+		{
+			"name": "material/box",
+			"config": {
+				"style": {
+					"flexGrow": 1,
+					"display": "flex",
+					"alignItems": "center"
+				}
+			},
+			"children": [
+				{
+					"name": "material/typography",
+					"config": {
+						"variant": "h6"
+					},
+					"children": [
+						{
+							"name": "material/link",
+							"config": {
+								"href": "/"
+							},
+							"children": [
+								{ "name": "bloginfo/name" }
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "irving/menu",
+			"config": {
+				"slug": "primary_menu"
+			}
+		}
+	]
+}

@@ -1,0 +1,69 @@
+{
+	"name": "material/grid",
+	"config": {
+		"item": true,
+		"xs": 12,
+		"sm": 6,
+		"md": 4
+	},
+	"children": [
+		{
+			"name": "post/permalink",
+			"config": {
+				"underline": "none"
+			},
+			"children": [
+				{
+					"name": "material/card",
+					"config": {
+						"style": {
+							"maxWidth": "100%"
+						}
+					},
+					"children": [
+						{
+							"name": "material/card-action-area",
+							"children": [
+								{
+									"name": "material/card-media",
+									"config": {
+										"style": {
+											"height": "250px"
+										}
+									}
+								},
+								{
+									"name": "material/card-content",
+									"children": [
+										{
+											"name": "material/typography",
+											"config": {
+												"gutterBottom": true,
+												"variant": "h5",
+												"component": "h2"
+											},
+											"children": [
+												{ "name": "post/title" }
+											]
+										},
+										{
+											"name": "material/typography",
+											"config": {
+												"color": "textSecondary",
+												"variant": "body2",
+												"component": "p"
+											},
+											"children": [
+												{ "name": "post/excerpt" }
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -32,7 +32,12 @@
 										"tag": "h1"
 									},
 									"children": [
-										{ "__": "Oops! That page can’t be found." }
+										{
+											"__": {
+												"en": "Oops! That page can’t be found.",
+												"es": "Lo siento! No... page.... found."
+											}
+										}
 									]
 								},
 								{

@@ -4,13 +4,32 @@
 			"name": "irving/head"
 		},
 		{
-			"name": "irving/header-wrapper"
+			"name": "irving/header-wrapper",
+			"config": {
+				"themeName": "fullBleed"
+			},
+			"children": [
+				{
+					"name": "template-parts/header"
+				}
+			]
 		},
 		{
-			"name": "irving/body-wrapper"
+			"name": "irving/body-wrapper",
+			"children": [
+				"Loading..."
+			]
 		},
 		{
-			"name": "irving/footer-wrapper"
+			"name": "irving/footer-wrapper",
+			"config": {
+				"themeName": "fullBleed"
+			},
+			"children": [
+				{
+					"name": "template-parts/footer"
+				}
+			]
 		}
 	]
 }

@@ -2,7 +2,7 @@
 	"name": "testing",
 	"children": [
 		{
-			"name": "irving/post-title"
+			"name": "post/title"
 		}
 	]
 }

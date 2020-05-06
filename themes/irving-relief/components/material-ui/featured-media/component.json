@@ -1,0 +1,12 @@
+{
+	"name": "material/featured-media",
+	"category": "Material UI",
+	"description": "Get a featured media component.",
+	"data_consumer": {
+		"postId": {
+			"ref": {
+				"type": "integer"
+			}
+		}
+	}
+}

@@ -2,8 +2,14 @@
 	{
 		"name": "testing-array",
 		"children": [
+			{ "name": "post/title" }
+		]
+	},
+	{
+		"name": "testing-array-two",
+		"children": [
 			{
-				"name": "irving/post-title"
+				"name": "post/title"
 			}
 		]
 	}

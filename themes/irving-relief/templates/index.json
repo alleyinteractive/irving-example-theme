@@ -4,19 +4,112 @@
 			"name": "irving/body-wrapper",
 			"children": [
 				{
-					"name": "irving/sidebar",
+					"name": "material/container",
 					"config": {
-						"themeName": "two-by-three"
-					}
-				},
-				{
-					"name": "irving/stack",
-					"config": {
-
+						"maxWidth": "lg"
 					},
-					"children": {
-
-					}
+					"children": [
+						{
+							"name": "material/grid",
+							"config": {
+								"container": true,
+								"spacing": 4
+							},
+							"children": [
+								{
+									"name": "material/grid",
+									"config": {
+										"item": true,
+										"xs": 12,
+										"sm": 4
+									},
+									"children": [
+										{
+											"name": "material/typography",
+											"config": {
+												"variant": "h3",
+												"component": "h2",
+												"m": 12,
+												"style": {
+													"margin-top": "1em",
+													"font-weight": "600"
+												}
+											},
+											"children": [
+												"Covid-19 Relief"
+											]
+										},
+										{
+											"name": "material/typography",
+											"config": {
+												"variant": "body1",
+												"component": "p",
+												"style": {
+													"line-height": "1.5",
+													"font-size": "1.1875em",
+													"font-weight": "200"
+												}
+											},
+											"children": [
+												"Making sure the courage of health workers on the front lines is honored with meaningful support, and the people most at risk in this pandemic are cared for – regardless of politics, religion, or ability to pay."
+											]
+										}
+									]
+								},
+								{
+									"name": "material/grid",
+									"config": {
+										"item": true,
+										"xs": 12,
+										"sm": 8
+									},
+									"children": [
+										{
+											"name": "material/card-media",
+											"config": {
+												"image": "https://i1.wp.com/www.directrelief.org/wp-content/uploads/2018/01/20200327_zap_by1_005-2-scaled.jpg",
+												"style": {
+													"height": "450px"
+												}
+											}
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "material/typography",
+							"config": {
+								"variant": "h3",
+								"component": "h2",
+								"style": {
+									"margin-top": "1em",
+									"font-weight": "600"
+								}
+							},
+							"children": [
+								"Latest Posts"
+							]
+						},
+						{
+							"name": "material/grid",
+							"config": {
+								"container": true,
+								"spacing": 2
+							},
+							"children": [
+								{
+									"name": "irving/wp_query",
+									"config": {
+										"posts_per_page": 12
+									},
+									"children": [
+										{ "name": "template-parts/post-card" }
+									]
+								}
+							]
+						}
+					]
 				}
 			]
 		}

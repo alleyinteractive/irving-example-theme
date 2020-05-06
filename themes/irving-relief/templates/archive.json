@@ -17,15 +17,24 @@
 								"component": "h1"
 							},
 							"children": [
-								{ "name": "post/title" }
+								{
+									"name": "archive/title"
+								}
 							]
 						},
 						{
-							"name": "post/content",
+							"name": "material/typography",
 							"config": {
-								"themeName": "body"
-							}
+								"gutterBottom": true,
+								"variant": "h3",
+								"component": "h3"
+							},
+							"children": [
+								{ "name": "post/title" }
+							]
 						},
+						{ "name": "irving/featured-media" },
+						{ "name": "post/next-post" },
 						{
 							"name": "material/grid",
 							"config": {
@@ -34,10 +43,7 @@
 							},
 							"children": [
 								{
-									"name": "irving/wp_query",
-									"config": {
-										"posts_per_page": 3
-									},
+									"name": "irving/loop",
 									"children": [
 										{ "name": "template-parts/post-card" }
 									]
