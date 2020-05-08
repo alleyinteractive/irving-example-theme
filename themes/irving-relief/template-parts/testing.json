@@ -1,8 +1,0 @@
-{
-	"name": "testing",
-	"children": [
-		{
-			"name": "post/title"
-		}
-	]
-}

@@ -33,8 +33,8 @@
 								{ "name": "post/title" }
 							]
 						},
-						{ "name": "irving/featured-media" },
-						{ "name": "post/next-post" },
+						{ "name": "material/featured-media" },
+						{ "name": "irving/next-post" },
 						{
 							"name": "material/grid",
 							"config": {

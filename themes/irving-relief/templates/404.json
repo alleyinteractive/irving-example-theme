@@ -12,9 +12,6 @@
 			]
 		},
 		{
-			"name": "template-parts/testing"
-		},
-		{
 			"name": "irving/body-wrapper",
 			"children": [
 				{

@@ -99,7 +99,7 @@
 							},
 							"children": [
 								{
-									"name": "irving/wp_query",
+									"name": "irving/wp-query",
 									"config": {
 										"posts_per_page": 12
 									},

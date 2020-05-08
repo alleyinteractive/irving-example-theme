@@ -1,0 +1,38 @@
+{
+	"page": [
+		{
+			"name": "irving/body-wrapper",
+			"children": [
+				{
+					"name": "irving/container",
+					"config": {
+						"themeName": "contentWidth"
+					},
+					"children": [
+						{
+							"name": "material/typography",
+							"config": {
+								"gutterBottom": true,
+								"variant": "h2",
+								"component": "h1"
+							},
+							"children": [
+								"Testing a title: ",
+								{ "name": "post/title" }
+							]
+						},
+						{
+							"name": "material/featured-media"
+						},
+						{
+							"name": "post/excerpt",
+							"config": {
+								"themeName": "body"
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

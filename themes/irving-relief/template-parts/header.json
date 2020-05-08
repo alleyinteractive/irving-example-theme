@@ -28,7 +28,7 @@
 								"href": "/"
 							},
 							"children": [
-								{ "name": "bloginfo/name" }
+								{ "name": "site/name" }
 							]
 						}
 					]
@@ -36,7 +36,7 @@
 			]
 		},
 		{
-			"name": "irving/menu",
+			"name": "site/menu",
 			"config": {
 				"slug": "primary_menu"
 			}
