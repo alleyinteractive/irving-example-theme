@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    "syntax-dynamic-import",
+    "transform-object-assign",
+    ["module-resolver", {
+      "root": [
+        "./client/src/**",
+        "./client/src/js/**",
+      ],
+    }]
+  ],
+  "presets": [
+    "@babel/preset-env"
+  ]
+}

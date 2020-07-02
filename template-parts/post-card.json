@@ -1,0 +1,55 @@
+{
+	"name": "styled-css-grid/cell",
+	"children": [
+		{
+			"name": "irving/container",
+			"config": {
+				"style": {
+					"background": "#EEE",
+					"border-radius": "3px"
+				}
+			},
+			"children": [
+				{
+					"name": "irving/post-permalink",
+					"config": {
+						"style": {
+							"text-decoration": "none"
+						}
+					},
+					"children": [
+						{
+							"name": "irving/post-featured-image",
+							"config": {
+								"aspect_ratio": "16:9",
+								"fallback_src": "https://source.unsplash.com/random/1280x720",
+								"show_meta": false
+							}
+						},
+						{
+							"name": "irving/container",
+							"config": {
+								"style": {
+									"padding": "1rem"
+								}
+							},
+							"children": [
+								{
+									"name": "irving/post-title",
+									"theme": "h2",
+									"config": {
+										"tag": "h2"
+									}
+								},
+								{
+									"name": "irving/post-excerpt",
+									"tag": "p"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

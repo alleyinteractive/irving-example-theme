@@ -1,0 +1,32 @@
+{
+  "name": "irving-example-settings",
+  "contexts": [
+    {
+      "type": "submenu",
+      "page_title": { "__": "Theme Settings" },
+      "menu_title": { "__": "Theme Settings" },
+      "parent_slug": "options-general.php"
+    }
+  ],
+  "tabbed": "vertical",
+  "children": {
+    "templates": {
+      "label": { "__": "Theme Templates" },
+      "children": {
+        "header": {
+          "label": { "__": "Header" },
+          "children": {
+          	"layout": {
+              "type": "select",
+              "default_value": "header-left",
+              "options": {
+               "header-left": { "__": "Left Aligned" },
+               "header-center": { "__": "Center Aligned" }
+             }
+           }
+         }
+       }
+     }
+   }
+ }
+}

@@ -1,0 +1,300 @@
+/**
+ * Contains styles for core markup
+ *
+ * These should be used for both frontend representations of body content and admin editor styles
+ *
+ * All article-level nodes should be styled in this partial. A list of these nodes can be found here:
+ * https://github.com/WordPress/WordPress/blob/master/wp-includes/kses.php#L61-L415
+ */
+
+// Spacing for block-level elements
+p,
+ul,
+ol,
+blockquote,
+q,
+pre,
+address,
+area,
+article,
+aside,
+audio,
+code,
+colgroup,
+div,
+details,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+img,
+section,
+table,
+summary,
+video {
+  display: block;
+  margin-bottom: 2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+big {
+  font-size: large;
+  font-weight: 700;
+}
+
+hr {
+  border: 1px solid gray;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  font-style: italic;
+  margin: rem(0 10);
+}
+
+cite {
+  font-size: 0.75em;
+}
+
+th {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+th,
+td {
+  border: 1px solid gray;
+  padding: 0.5em;
+}
+
+del,
+strike {
+  text-decoration: line-through;
+}
+
+ul {
+  list-style: disc outside none;
+
+  ul {
+    margin-top: 0.5em;
+  }
+
+  > li > ul {
+    list-style-type: circle;
+
+    > li > ul {
+      list-style-type: square;
+    }
+  }
+}
+
+ol {
+  list-style: decimal outside none;
+
+  ol {
+    margin-top: 0.5em;
+  }
+
+  > li > ol {
+    list-style-type: lower-roman;
+
+    > li > ol {
+      list-style-type: lower-alpha;
+    }
+  }
+}
+
+li {
+  margin: 0 0 0.5em 1em;
+}
+
+a {
+
+  img {
+    border: none;
+    display: inline-block;
+  }
+}
+
+p {
+
+  img {
+    margin-bottom: 0.5em;
+    /* a small bottom margin prevents content floating under images */
+  }
+}
+
+address {
+  font-size: 0.75em;
+}
+
+abbr,
+acronym {
+  color: gray;
+  text-decoration: underline dotted;
+}
+
+code,
+var,
+tt,
+kbd {
+  display: inline;
+  font: 400 1em 'Courier', monospace;
+}
+
+pre {
+  font: 400 1em 'Courier', monospace;
+}
+
+img,
+figure,
+video {
+  display: block;
+}
+
+figure {
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+figcaption {
+  font-size: 0.75em;
+  text-align: center;
+}
+
+.wp-caption {
+  height: auto;
+}
+
+// Alignment
+.alignleft {
+  display: inline;
+  float: left;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Images
+.image-attachment {
+
+  div.entry-meta {
+    float: left;
+  }
+
+  nav {
+    float: right;
+    margin: 0 0 1em;
+  }
+}
+
+.entry-content {
+  clear: both;
+}
+
+.entry-attachment {
+  background: #eee;
+  margin: 0 0 1em;
+  padding: 1em;
+  text-align: center;
+}
+
+.attachment {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*
+Resize images to fit the main content area.
+- Applies only to images uploaded via WordPress by targeting size-* classes.
+- Other images will be left alone. Use "size-auto" class to apply to other images.
+*/
+img {
+
+  .attachment &,
+  .widget-area &,
+  &.size-auto,
+  &.size-full,
+  &.size-large,
+  &.size-medium {
+    height: auto;
+    /* Override height to match resized width for correct aspect ratio. */
+    max-width: 100%;
+    /* When images are too wide for containing element, force them to fit. */
+  }
+
+  &.alignleft {
+    margin-right: 1em;
+  }
+
+  &.alignright {
+    margin-left: 1em;
+  }
+
+  .wp-caption & {
+    margin: 0.25em;
+  }
+}
+
+.wp-caption {
+  height: auto;
+  max-width: 100%;
+  padding: 0.5em;
+  text-align: center;
+
+  .wp-caption-text {
+    margin: 0.5em;
+  }
+}
+
+.wp-smiley {
+  margin: 0;
+}
+
+// Widgets
+.widget {
+  display: block;
+}
+
+.widget-area .widget_search {
+  overflow: hidden;
+
+  input {
+    float: left;
+  }
+}

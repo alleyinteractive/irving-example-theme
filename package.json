@@ -1,27 +1,71 @@
 {
-  "name": "irving-example-theme",
+  "name": "irving-example",
+  "description": "Irving Example Front End Build System",
   "version": "1.0.0",
-  "description": "Example Irving Theme.",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "dev": "irving dev",
-    "build": "irving build",
-    "start": "irving start",
-    "styleguide:dev": "BABEL_ENV=app NODE_ENV=production npx styleguidist build --config ./config/styleguide.config.js",
-    "styleguide:build": "BABEL_ENV=app NODE_ENV=production npx styleguidist build --config ./config/styleguide.config.js"
+    "preinstall": "npx check-node-version --package",
+    "dev": "webpack-dev-server --config client/config/webpack.config.js --mode development --no-inline",
+    "build": "webpack --config client/config/webpack.config.js --mode production",
+    "scaffold": "scaffold dir ./scaffold --theme=./",
+    "watch-scaffold": "nodemon -l -e json -w scaffold -x 'npm run scaffold'",
+    "lint-configs": "eslint client/config/**/*.js",
+    "docs": "doctoc ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:alleyinteractive/irving-example-theme.git"
+  "engines": {
+    "node": "12",
+    "npm": "6"
   },
-  "author": "Alley",
-  "license": "ISC",
   "dependencies": {
-    "@irvingjs/core": "^2.6.0-rc.0",
-    "@irvingjs/styled": "^2.0.0",
-    "@irvingjs/styleguide": "^2.1.2",
-    "@material-ui/core": "^4.9.12",
-    "@wordpress/block-library": "^2.16.1",
-    "classnames": "^2.2.6"
-  }
+    "@babel/polyfill": "^7.8.3",
+    "js-component-framework": "^1.2.4",
+    "node-sass-json-importer": "^4.1.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "sass-resources-loader": "^2.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "autoprefixer": "9.6.1",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "chalk": "^2.4.2",
+    "check-node-version": "^4.0.1",
+    "clean-webpack-plugin": "3.0.0",
+    "css-loader": "^3.2.0",
+    "doctoc": "^1.4.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-import-resolver-babel-module": "^5.1.2",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "file-loader": "^4.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "postcss": "7.0.18",
+    "postcss-loader": "3.0.0",
+    "sass-loader": "8.0.0",
+    "style-loader": "1.0.0",
+    "stylelint": "^10.1.0",
+    "stylelint-a11y": "^1.2.2",
+    "stylelint-bare-webpack-plugin": "^1.1.3",
+    "stylelint-order": "^3.1.0",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-stats-plugin": "0.3.0"
+  },
+  "browserslist": [
+    "last 3 versions"
+  ]
 }

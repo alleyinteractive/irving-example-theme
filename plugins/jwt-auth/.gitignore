@@ -1,9 +1,0 @@
-.DS_Store
-
-# PHPUnit
-/coverage
-/tests/wp-tests
-
-# Composer
-/vendor
-composer.lock

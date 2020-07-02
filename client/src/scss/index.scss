@@ -1,0 +1,21 @@
+@import 'reset';
+@import 'wp-content';
+
+.site-title a {
+  color: brown;
+}
+
+body,
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.primary-heading {
+  @include font-props(50, 65, bold);
+}

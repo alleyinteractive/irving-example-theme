@@ -1,0 +1,113 @@
+{
+	"page": [
+		{
+			"name": "irving/body-wrapper",
+			"children": [
+				{
+					"name": "irving/container",
+					"config": {
+						"max_width": "lg",
+						"style": {
+							"align-items": "center",
+							"display": "flex",
+							"flex-direction": "column",
+							"justify-content": "center",
+							"margin-bottom": "4rem",
+							"padding-top": "2rem"
+						}
+					},
+					"children": [
+						{
+							"name": "irving/text",
+							"theme": "h1",
+							"config": {
+								"content": "Page not found.",
+								"style": {
+									"margin-bottom": "1rem"
+								},
+								"tag": "h1"
+							}
+						},
+						{
+							"name": "irving/text",
+							"config": {
+								"content": "We could not find anything for that URL.",
+								"style": {
+									"align": "center",
+									"color": "black"
+								},
+								"tag": "p"
+							}
+						},
+						{
+							"name": "irving/link",
+							"config": {
+								"href": "/",
+								"style": {
+									"display": "inline-block",
+									"margin-top": "1rem",
+									"text-decoration": "underline"
+								}
+							},
+							"children": [
+								{
+									"name": "irving/text",
+									"config": {
+										"content": "Return to the homepage."
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "irving/container",
+					"config": {
+						"max_width": "lg",
+						"style": {
+							"margin-bottom": "4rem"
+						}
+					},
+					"children": [
+							{
+								"name": "irving/post-list",
+								"config":{
+									"query_args": {
+										"posts_per_page": 3,
+										"exclude": true
+									},
+									"templates": {
+										"before": [
+											{
+												"name": "irving/text",
+												"theme": "h3",
+												"config": {
+													"content": "Latest Posts",
+													"style": {
+														"margin-bottom": "1rem"
+													},
+													"tag": "h3"
+												}
+											}
+										],
+										"wrapper": [
+											{
+												"name": "styled-css-grid/grid",
+												"config": {
+													"columns": "repeat(auto-fit, minmax(400px, 1fr))",
+													"gap": "1rem"
+												}
+											}
+										],
+										"item": [
+											{ "name": "template-parts/post-card" }
+										]
+									}
+								}
+							}
+					]
+				}
+			]
+		}
+	]
+}
