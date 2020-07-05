@@ -7,6 +7,7 @@
 		},
 		"templates": {
 			"before": [
+
 				{
 					"name": "irving/text",
 					"theme": "h2",
@@ -21,10 +22,7 @@
 					"name": "styled-css-grid/grid",
 					"config": {
 						"columns": "repeat(auto-fit, minmax(200px, 1fr))",
-						"gap": "2rem",
-						"style": {
-							"margin-bottom": "2rem"
-						}
+						"gap": "2rem"
 					}
 				}
 			],

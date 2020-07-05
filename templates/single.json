@@ -14,14 +14,14 @@
 					"children": [
 						{
 							"name": "irving/post-title",
-							"theme": "heading",
+							"theme": "h1",
 							"config": {
 								"tag": "h1"
 							}
 						},
 						{
 							"name": "irving/post-excerpt",
-							"theme": "subheading",
+							"theme": "h4",
 							"config": {
 								"tag": "h2"
 							}
