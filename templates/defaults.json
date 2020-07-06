@@ -3,7 +3,7 @@
 		{
 			"name": "irving/header-wrapper",
 			"children": [
-				{ "name": "template-parts/header-center" }
+				{ "name": "template-parts/header" }
 			]
 		},
 		{ "name": "irving/body-wrapper" },

@@ -113,7 +113,7 @@
 						{
 							"name": "irving/social-sharing",
 							"config": {
-								"platforms": [ "facebook", "twitter", "email" ],
+								"platforms": [ "facebook", "twitter", "email", "whatsapp" ],
 								"style": {
 									"margin-bottom": "1rem"
 								}

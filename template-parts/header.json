@@ -27,7 +27,10 @@
 							"width": 1
 						},
 						"children": [
-							{ "name": "irving/site-logo" }
+							{
+								"name": "irving/site-logo",
+								"theme": "header"
+							}
 						]
 					},
 					{
@@ -54,7 +57,7 @@
 									"href": "/search/"
 								},
 								"children": [
-									{ "name": "irving-icon/search" }
+									{ "name": "irving/search-icon" }
 								]
 							}
 						]

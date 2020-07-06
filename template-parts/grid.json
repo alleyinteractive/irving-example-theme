@@ -1,0 +1,10 @@
+{
+	"name": "styled-css-grid/grid",
+	"config": {
+		"columns": "repeat(auto-fit, minmax(400px, 1fr))",
+		"gap": "1rem",
+		"style": {
+			"margin-bottom": "1rem"
+		}
+	}
+}

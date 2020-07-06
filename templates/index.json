@@ -32,11 +32,7 @@
 									],
 									"wrapper": [
 										{
-											"name": "styled-css-grid/grid",
-											"config": {
-												"columns": "repeat(auto-fit, minmax(400px, 1fr))",
-												"gap": "1rem"
-											}
+											"name": "template-parts/grid"
 										}
 									],
 									"item": [
