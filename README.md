@@ -9,7 +9,9 @@ It primarily contains examples of how to structure components in templates and t
 *(server may need to boot up, refresh if you see an error)*
 
 ## Templates
-[Documentation on templating with WP Irving](http://storybook.irvingjs.com).
+The templates in this theme use [WP Irving](https://github.com/alleyinteractive/wp-irving)'s implementation of the [Template Hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/). In a nutshell, files in `/templates/{template-name}.json` will be automatically loaded following the Template Hierarchy for a given WordPress route.
+
+Visit the [Irving docs (WIP)](http://storybook.irvingjs.com) for a more in-depth look at templating.
 
 **404.json**
 Page not found template.
@@ -18,7 +20,7 @@ Page not found template.
 Displays a grid of posts in reverse chronology and pagination to navigate.
 
 **author.json**
-Same as archive.json.
+Displays a grid of posts in reverse chronology and pagination to navigate, limited to content by a specific author.
 
 **defaults.json**
 The defaults.json layout is used by Irving core as a "global" layout. This includes the top-level head, header, body, and footer wrappers.
@@ -36,12 +38,12 @@ Displays a search input, meta info about the results, a grid of posts in reverse
 A single post. Supports title, excerpt, featured image, social share links, and Gutenberg-driven content.
 
 ## Components
-[Full documentation on components in Irving and WP Irving](http://storybook.irvingjs.com).
+Visit the [Irving docs (WIP)](http://storybook.irvingjs.com) for a more in-depth look at components.
 
 ## Installation
 To install this theme, upload the zip or clone the repo into your `/wp-content/themes/` directory and activate from the admin.
 
-See the [Quick Start documentation](http://storybook.irvingjs.com) on how to work with the Irving Core frontend.
+Visit the Irving [Quick Start Guide (WIP)](http://storybook.irvingjs.com) to setup an Irving frontend that works with this example theme.
 
 ## Development
 ### Branch Workflow
