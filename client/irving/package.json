@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "irving dev",
     "build": "irving build",
-    "start": "irving start",
+    "start": "irving start"
   },
   "engines": {
     "node": "12.16.x"
