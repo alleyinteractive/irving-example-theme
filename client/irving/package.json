@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "irving dev",
-    "build": "irving build",
+    "webpack": "irving build",
+    "preflight": "npx @automattic/vip-go-preflight-checks",
+    "build": "if [ -z $VIP_GO_APP_ID ]; then npm run webpack; else exit 0; fi",
     "start": "irving start"
   },
   "engines": {
@@ -13,13 +15,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:alleyinteractive/irving-example-theme.git"
+    "url": "git@github.com:alleyinteractive/irving-example-theme.git",
+    "directory": "themes/irving-example-theme/client/irving"
   },
   "author": "Alley",
   "license": "ISC",
   "dependencies": {
+    "@automattic/vip-go": "^1.0.0",
     "@irvingjs/core": "^2.20.0",
     "@irvingjs/styled-components": "^2.21.2",
+    "@irvingjs/vip-go": "^2.20.0",
     "@irvingjs/wp-admin-bar": "^2.20.0",
     "lodash": "^4.17.15",
     "react-icons": "^3.10.0"

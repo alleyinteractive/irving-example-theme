@@ -1,0 +1,40 @@
+language: node_js
+node_js:
+  - 12
+
+# This "ignore" directive prevents Travis from processing branches with
+# a -built suffix, thus avoiding endless loops.
+if: branch =~ ^.*(?<!-built)$
+
+branches:
+  only:
+    - production-irving-example-theme
+
+cache: false
+
+# Ensure npm major version matches from package.json
+before_script:
+  - export TRAVIS_REPO_OWNER=${TRAVIS_REPO_SLUG%/*}
+  - npm i -g npm@$(jq -r '.engines.npm' package.json | egrep -oe "[0-9]+" | head -n1)
+  - npm --version
+
+script:
+  - |
+      if [ "$TRAVIS_BRANCH" == "develop-irving-example-theme" ]; then
+        export API_ROOT_URL=https://wordpress-staging.irvingjs.com/wp-json/irving/v1
+        export ROOT_URL=https://staging.irvingjs.com
+      elif [ "$TRAVIS_BRANCH" == "production-irving-example-theme" ]; then
+        export API_ROOT_URL=https://wordpress.irvingjs.com/wp-json/irving/v1
+        export ROOT_URL=https://demo.irvingjs.com
+      fi
+  - export APP_ROOT=/home/nodejs-app
+  - npm install
+  - npm run webpack
+
+# Run the build.
+# This will only happen on merges, not on PRs.
+after_script:
+  - bash -e bin/after-script.sh
+
+notifications:
+  email: false
