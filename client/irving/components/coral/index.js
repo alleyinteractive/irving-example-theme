@@ -3,7 +3,7 @@ import useLoadScript from '@irvingjs/core/hooks/useLoadScript';
 
 const CoralTalkEmbed = () => {
   const loaded = useLoadScript(
-    'http://localhost:3000/assets/js/embed.js',
+    'https://irving-prod-coral.herokuapp.com/assets/js/embed.js',
     'coral'
   );
 
@@ -12,7 +12,7 @@ const CoralTalkEmbed = () => {
       window.Coral.createStreamEmbed({
         id: 'coral_thread',
         autoRender: true,
-        rootURL: 'http://localhost:3000',
+        rootURL: 'https://irving-prod-coral.herokuapp.com/',
       });
     }
   }, [loaded]);
