@@ -118,6 +118,10 @@
 									"margin-bottom": "1rem"
 								}
 							}
+						},
+						{
+							"name": "irving/coral",
+							"config": {}
 						}
 					]
 				},
