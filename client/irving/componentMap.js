@@ -1,12 +1,20 @@
-import ComponentMap from '@irvingjs/styled-components';
+import createThemedComponentMap from '@irvingjs/styled-components/componentMap';
 import AdminBar from '@irvingjs/wp-admin-bar';
+
+// Integrations.
+import { IntegrationsManager } from '@irvingjs/integrations';
 import CoralTalkEmbed from 'components/coral';
+
+// Icons.
 import { FiSearch } from 'react-icons/fi';
+
+// Themes.
 import userThemes from './themes';
 
 export default {
-  ...ComponentMap(userThemes),
-  'irving/admin-bar': AdminBar,
+  ...createThemedComponentMap(userThemes),
   'irving-icon/search': FiSearch,
+  'irving/admin-bar': AdminBar,
   'irving/coral': CoralTalkEmbed,
+  'irving/integrations': IntegrationsManager,
 };

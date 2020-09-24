@@ -18,10 +18,11 @@
   "author": "Alley",
   "license": "ISC",
   "dependencies": {
-    "@irvingjs/core": "^3.2.0",
-    "@irvingjs/styled-components": "^3.2.1",
-    "@irvingjs/wp-admin-bar": "^3.2.0",
-    "lodash": "^4.17.15",
-    "react-icons": "^3.10.0"
+    "@irvingjs/core": "^4.0.0",
+    "@irvingjs/integrations": "^4.1.0-alpha.2",
+    "@irvingjs/styled-components": "^4.0.0",
+    "@irvingjs/wp-admin-bar": "^4.0.0",
+    "lodash": "^4.17.20",
+    "react-icons": "^3.11.0"
   }
 }
