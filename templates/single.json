@@ -98,7 +98,10 @@
 							]
 						},
 						{ "name": "hr" },
-						{ "name": "irving/post-content" },
+						{
+              "name": "irving/post-content",
+              "theme": "html"
+            },
 						{ "name": "hr" },
 						{
 							"name": "irving/text",

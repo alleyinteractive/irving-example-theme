@@ -9,10 +9,10 @@ import CoralTalkEmbed from 'components/coral';
 import { FiSearch } from 'react-icons/fi';
 
 // Themes.
-import userThemes from './themes';
+import themes from 'themes.js';
 
 export default {
-  ...createThemedComponentMap(userThemes),
+  ...createThemedComponentMap(themes),
   'irving-icon/search': FiSearch,
   'irving/admin-bar': AdminBar,
   'irving/coral': CoralTalkEmbed,
