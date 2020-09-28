@@ -3,11 +3,15 @@
     {
       "name": "irving/header-wrapper"
     },
-    { "name": "irving/body-wrapper" },
+    {
+      "name": "irving/body-wrapper"
+    },
     {
       "name": "irving/footer-wrapper",
       "children": [
-        { "name": "template-parts/footer" }
+        {
+          "name": "template-parts/footer"
+        }
       ]
     }
   ]
