@@ -20,8 +20,6 @@ use WP_Irving\Theme_Options;
  */
 function register_branding_controls( WP_Customize_Manager $wp_customize ) {
 
-	$prefix = 'irving_example_theme';
-
 	// Register branding section.
 	$wp_customize->add_section(
 		'branding',
@@ -37,7 +35,7 @@ function register_branding_controls( WP_Customize_Manager $wp_customize ) {
 	 * Add branding settings.
 	 */
 	$wp_customize->add_setting(
-		$prefix . '-primary_color',
+		'primary_color',
 		[
 			'default'    => '#BC3855',
 			'capability' => 'edit_theme_options',
@@ -46,7 +44,7 @@ function register_branding_controls( WP_Customize_Manager $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		$prefix . '-secondary_color',
+		'secondary_color',
 		[
 			'default'    => '#8f3b84',
 			'capability' => 'edit_theme_options',
@@ -60,11 +58,11 @@ function register_branding_controls( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			$prefix . '-primary_color',
+			'primary_color',
 			[
 				'label'     => __( 'Primary Color', 'irving-example-theme' ),
 				'section'   => 'branding',
-				'settings'  => $prefix . '-primary_color',
+				'primary_color',
 			]
 		)
 	);
@@ -72,11 +70,11 @@ function register_branding_controls( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			$prefix . '-secondary_color',
+			'secondary_color',
 			[
 				'label'     => __( 'Secondary Color', 'irving-example-theme' ),
 				'section'   => 'branding',
-				'settings'  => $prefix . '-secondary_color',
+				'secondary_color',
 			]
 		)
 	);
@@ -90,8 +88,8 @@ add_action( 'customize_register', __NAMESPACE__ . '\register_branding_controls' 
  * @return array
  */
 function inject_branding( array $site_theme ): array {
-	$site_theme['colors']['brand']['primary']   = get_theme_mod( 'irving_example_theme-primary_color', '#BC3855' );
-	$site_theme['colors']['brand']['secondary'] = get_theme_mod( 'irving_example_theme-secondary_color', '#8f3b84' );
+	$site_theme['colors']['brand']['primary']   = get_theme_mod( 'primary_color', '#BC3855' );
+	$site_theme['colors']['brand']['secondary'] = get_theme_mod( 'secondary_color', '#8f3b84' );
 	return $site_theme;
 }
 add_filter( 'wp_irving_setup_site_theme', __NAMESPACE__ . '\inject_branding' );

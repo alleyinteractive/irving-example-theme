@@ -21,8 +21,6 @@ use WP_Irving\Theme_Options;
  */
 function register_header_controls( WP_Customize_Manager $wp_customize ) {
 
-	$prefix = 'irving_example_theme';
-
 	// Register header section.
 	$wp_customize->add_section(
 		'header',
@@ -38,7 +36,7 @@ function register_header_controls( WP_Customize_Manager $wp_customize ) {
 	 * Add header settings.
 	 */
 	$wp_customize->add_setting(
-		$prefix . '-header_template_part',
+		'header_template_part',
 		[
 			'default'    => 'header-default',
 			'capability' => 'edit_theme_options',
@@ -47,7 +45,7 @@ function register_header_controls( WP_Customize_Manager $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		$prefix . '-header_color_scheme',
+		'header_color_scheme',
 		[
 			'default'    => 'colors.brand.primary',
 			'capability' => 'edit_theme_options',
@@ -59,11 +57,11 @@ function register_header_controls( WP_Customize_Manager $wp_customize ) {
 	 * Add header controls.
 	 */
 	$wp_customize->add_control(
-		$prefix . '-header_template_part',
+		'header_template_part',
 		[
 			'label'    => __( 'Template', 'irving-example-theme' ),
 			'section'  => 'header',
-			'settings' => $prefix . '-header_template_part',
+			'settings' => 'header_template_part',
 			'type'     => 'select',
 			'default'  => 'header-default',
 			'choices'  => [
@@ -74,11 +72,11 @@ function register_header_controls( WP_Customize_Manager $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		$prefix . '-header_color_scheme',
+		'header_color_scheme',
 		[
 			'label'    => __( 'Color Scheme', 'irving-example-theme' ),
 			'section'  => 'header',
-			'settings' => $prefix . '-header_color_scheme',
+			'settings' => 'header_color_scheme',
 			'type'     => 'select',
 			'choices'  => [
 				'colors.brand.primary'   => __( 'Primary', 'irving-example-theme' ),
@@ -96,7 +94,7 @@ add_action( 'customize_register', __NAMESPACE__ . '\register_header_controls' );
  * @return array
  */
 function inject_header_options( array $site_theme ): array {
-	$site_theme['header']['background_color'] = get_theme_mod( 'irving_example_theme-header_color_scheme' );
+	$site_theme['header']['background_color'] = get_theme_mod( 'header_color_scheme' );
 	$site_theme['header']['color']            = 'white';
 	return $site_theme;
 }
@@ -117,7 +115,7 @@ function include_header_template_part( array $children, array $config, string $n
 		return $children;
 	}
 
-	$template_part_slug = get_theme_mod( 'irving_example_theme-header_template_part' );
+	$template_part_slug = get_theme_mod( 'header_template_part' );
 	switch ( $template_part_slug ) {
 		case 'header-default':
 		default:
