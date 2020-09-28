@@ -1,53 +1,53 @@
 {
-	"page": [
-		{
-			"name": "irving/body-wrapper",
-			"children": [
-				{
-					"name": "irving/container",
-					"config": {
-						"max_width": "lg",
-						"style": {
-							"margin-bottom": "1rem"
-						}
-					},
-					"children": [
-						{
-							"name": "irving/post-list",
-							"config":{
-								"query_args": {
-									"posts_per_page": 12,
-									"exclude": true
-								},
-								"templates": {
-									"before": [
-										{
-											"name": "irving/text",
-											"theme": "h2",
-											"config": {
-												"content": "Latest Posts",
-												"tag": "h2"
-											}
-										}
-									],
-									"wrapper": [
-										{
-											"name": "styled-css-grid/grid",
-											"config": {
-												"columns": "repeat(auto-fit, minmax(400px, 1fr))",
-												"gap": "1rem"
-											}
-										}
-									],
-									"item": [
-										{ "name": "template-parts/post-card" }
-									]
-								}
-							}
-						}
-					]
-				}
-			]
-		}
-	]
+  "page": [
+    {
+      "name": "irving/body-wrapper",
+      "children": [
+        {
+          "name": "irving/container",
+          "config": {
+            "max_width": "lg",
+            "style": {
+              "margin-bottom": "1rem"
+            }
+          },
+          "children": [
+            {
+              "name": "irving/post-list",
+              "config":{
+                "query_args": {
+                  "posts_per_page": 12,
+                  "exclude": true
+                },
+                "templates": {
+                  "before": [
+                    {
+                      "name": "irving/text",
+                      "theme": "h2",
+                      "config": {
+                        "content": "Latest Posts",
+                        "tag": "h2"
+                      }
+                    }
+                  ],
+                  "wrapper": [
+                    {
+                      "name": "styled-css-grid/grid",
+                      "config": {
+                        "columns": "repeat(auto-fit, minmax(400px, 1fr))",
+                        "gap": "1rem"
+                      }
+                    }
+                  ],
+                  "item": [
+                    { "name": "template-parts/post-card" }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

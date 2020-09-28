@@ -1,65 +1,65 @@
 {
-	"name": "irving/container",
-	"config": {
-		"style": {
-			"background-color": "#d4d4db",
-			"padding": "2rem 0"
-		}
-	},
-	"children": [
-		{
-			"name": "irving/container",
-			"config": {
-				"max_width": "lg"
-			},
-			"children": [
-				{
-					"name": "styled-css-grid/grid",
-					"config": {
-						"columns": "3fr 1fr 1fr 1fr",
-						"gap": "20px"
-					},
-					"children": [
-						{
-							"name": "irving/container",
-							"children": [
-								{ "name": "irving/site-logo" },
-								{
-									"name": "irving/bloginfo",
-									"config": {
-										"show": "description"
-									}
-								}
-							]
-						},
-						{
-							"name": "irving/site-menu",
-							"theme": "default_vertical",
-							"config": {
-								"display_name": true,
-								"location": "footer-left"
-							}
-						},
-						{
-							"name": "irving/site-menu",
-							"theme": "default_vertical",
-							"config": {
-								"display_name": true,
-								"location": "footer-center"
-							}
-						},
-						{
-							"name": "irving/site-menu",
-							"theme": "default_vertical",
-							"config": {
-								"display_name": true,
-								"location": "footer-right"
-							}
-						}
+  "name": "irving/container",
+  "config": {
+    "style": {
+      "background-color": "#d4d4db",
+      "padding": "2rem 0"
+    }
+  },
+  "children": [
+    {
+      "name": "irving/container",
+      "config": {
+        "max_width": "lg"
+      },
+      "children": [
+        {
+          "name": "styled-css-grid/grid",
+          "config": {
+            "columns": "3fr 1fr 1fr 1fr",
+            "gap": "20px"
+          },
+          "children": [
+            {
+              "name": "irving/container",
+              "children": [
+                { "name": "irving/site-logo" },
+                {
+                  "name": "irving/bloginfo",
+                  "config": {
+                    "show": "description"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "irving/site-menu",
+              "theme": "default_vertical",
+              "config": {
+                "display_name": true,
+                "location": "footer-left"
+              }
+            },
+            {
+              "name": "irving/site-menu",
+              "theme": "default_vertical",
+              "config": {
+                "display_name": true,
+                "location": "footer-center"
+              }
+            },
+            {
+              "name": "irving/site-menu",
+              "theme": "default_vertical",
+              "config": {
+                "display_name": true,
+                "location": "footer-right"
+              }
+            }
 
-					]
-				}
-			]
-		}
-	]
+          ]
+        }
+      ]
+    }
+  ]
 }
