@@ -1,6 +1,6 @@
 <?php
 /**
- * Branding options.
+ * Header theme options.
  *
  * @package Irving_Example
  */
@@ -78,6 +78,7 @@ function register_header_controls( WP_Customize_Manager $wp_customize ) {
 			'section'  => 'header',
 			'settings' => 'header_color_scheme',
 			'type'     => 'select',
+			'default'  => 'colors.brand.primary',
 			'choices'  => [
 				'colors.brand.primary'   => __( 'Primary', 'irving-example-theme' ),
 				'colors.brand.secondary' => __( 'Secondary', 'irving-example-theme' ),
@@ -95,7 +96,6 @@ add_action( 'customize_register', __NAMESPACE__ . '\register_header_controls' );
  */
 function inject_header_options( array $site_theme ): array {
 	$site_theme['header']['background_color'] = get_theme_mod( 'header_color_scheme' );
-	$site_theme['header']['color']            = 'white';
 	return $site_theme;
 }
 add_filter( 'wp_irving_setup_site_theme', __NAMESPACE__ . '\inject_header_options' );

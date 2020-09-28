@@ -13,9 +13,7 @@ export const NameWrapper = styled.h3`
 `;
 
 export const Inner = styled.ol`
-  // align-items: right;
   display: flex;
-  // justify-content: right;
   list-style: none;
 `;
 

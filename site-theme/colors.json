@@ -1,4 +1,8 @@
 {
+  "brand": {
+    "primary": "BC3855",
+    "secondary": "8f3b84"
+  },
 	"primary": {
 		"light": "#4791db",
 		"main": "#1976d2",
@@ -33,9 +37,5 @@
 		"primary": "rgba(0, 0, 0, 0.87)",
 		"secondary": "rgba(0, 0, 0, 0.54)",
 		"disabled": "rgba(0, 0, 0, 0.38)"
-	},
-  "nested": {
-    "main": "colors.nested.secondary",
-    "secondary": "colors.error.dark"
-  }
+	}
 }

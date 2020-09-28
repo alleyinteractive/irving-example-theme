@@ -6,7 +6,7 @@ import { siteTheme } from '@irvingjs/styled/utils'
 // eslint-disable import/prefer-default-export.
 export const TextWrapper = styled.div`
   border-bottom: 3px solid ${siteTheme('colors.primary.main')};
-  color: ${siteTheme('colors.nested.main')};
+  color: ${siteTheme('colors.primary.main')};
   font-size: 2.25rem;
   margin-bottom: 1rem;
   padding-bottom: 1rem;

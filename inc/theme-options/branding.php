@@ -60,9 +60,9 @@ function register_branding_controls( WP_Customize_Manager $wp_customize ) {
 			$wp_customize,
 			'primary_color',
 			[
-				'label'     => __( 'Primary Color', 'irving-example-theme' ),
-				'section'   => 'branding',
-				'primary_color',
+				'label'   => __( 'Primary Color', 'irving-example-theme' ),
+				'section' => 'branding',
+				'setting' => 'primary_color',
 			]
 		)
 	);
@@ -72,9 +72,9 @@ function register_branding_controls( WP_Customize_Manager $wp_customize ) {
 			$wp_customize,
 			'secondary_color',
 			[
-				'label'     => __( 'Secondary Color', 'irving-example-theme' ),
-				'section'   => 'branding',
-				'secondary_color',
+				'label'   => __( 'Secondary Color', 'irving-example-theme' ),
+				'section' => 'branding',
+				'setting' => 'secondary_color',
 			]
 		)
 	);
