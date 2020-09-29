@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<ruleset name="Irving Example">
+	<description>PHP_CodeSniffer standard for Irving Example Theme.</description>
+
+	<!-- Include Alley Rules -->
+	<rule ref="alley-coding-standards">
+		<exclude-pattern>/tests/*</exclude-pattern>
+		<exclude-pattern>/inc/fields.php</exclude-pattern>
+	</rule>
+
+	<!-- Project customizations go here -->
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<!--
+			Verify that the text_domain is set to the desired text-domain.
+			Multiple valid text domains can be provided as a comma-delimited list.
+			 -->
+			<property name="text_domain" type="array" value="irving-example" />
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="irving_example"/>
+				<!-- Allow ai_get_template_part prefixes. -->
+				<element value="ai_"/>
+				<element value="AI_"/>
+				<element value="_ai_"/>
+			</property>
+		</properties>
+		<exclude-pattern>/tests/bootstrap\.php</exclude-pattern>
+	</rule>
+
+	<rule ref="Generic.PHP.ForbiddenFunctions">
+		<properties>
+			<!--
+			WordPress.com VIP does not propagate wp_cache_set data across datacenters,
+			largely to avoid attempting to propagate large (>50k) data for batcache.
+			-->
+			<property name="forbiddenFunctions" type="array" value="wp_cache_add=>wp_cache_set" />
+			<!-- This is the newer format, only supported in PHPCS 3.3.0+
+			<property name="forbiddenFunctions" type="array">
+				<element key="wp_cache_add" value="wp_cache_set"/>
+			</property> -->
+		</properties>
+	</rule>
+
+	<rule ref="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket">
+		<type>warning</type>
+	</rule>
+
+	<rule ref="PEAR.Functions.FunctionCallSignature.MultipleArguments">
+		<type>warning</type>
+	</rule>
+
+	<rule ref="PEAR.Functions.FunctionCallSignature.CloseBracketLine">
+		<type>warning</type>
+	</rule>
+
+</ruleset>

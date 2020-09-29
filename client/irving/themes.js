@@ -7,7 +7,7 @@ import * as textSubheading from './components/text/subheading';
 
 export default {
   'irving/menu': {
-  	headerDefault: headerDefaultMenu,
+    headerDefault: headerDefaultMenu,
   },
   'irving/text': {
     heading: textHeading,
