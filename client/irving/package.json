@@ -7,7 +7,8 @@
     "dev": "irving dev",
     "build": "irving build",
     "start": "irving start",
-    "link-all": "npm install && npx irving link-all"
+    "link-all": "npm install && npx irving link-all",
+    "predev": "npx check-node-version --package"
   },
   "engines": {
     "node": "12.16.x"
@@ -25,5 +26,8 @@
     "@irvingjs/wp-admin-bar": "^4.0.0",
     "lodash": "^4.17.20",
     "react-icons": "^3.11.0"
+  },
+  "devDependencies": {
+    "check-node-version": "^4.0.3"
   }
 }
