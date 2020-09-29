@@ -12,14 +12,6 @@ namespace Irving_Example;
 define( 'IRVING_EXAMPLE_PATH', dirname( __FILE__ ) );
 define( 'IRVING_EXAMPLE_URL', get_template_directory_uri() );
 
-// Set the domain for cross-domain cookies.
-add_filter(
-	'wp_irving_jwt_token_cookie_domain',
-	function () {
-		return strstr( home_url(), 'alley.test' ) ? '.alley.test' : '.alleydev.com';
-	}
-);
-
 // WordPress utilities.
 require_once IRVING_EXAMPLE_PATH . '/inc/class-wp-utils.php';
 
@@ -39,6 +31,9 @@ if ( WP_Utils::wp_cli() ) {
 // Manage static assets (js and css).
 require_once IRVING_EXAMPLE_PATH . '/inc/assets.php';
 
+// Irving customizations.
+require_once IRVING_EXAMPLE_PATH . '/inc/irving.php';
+
 // Media includes.
 require_once IRVING_EXAMPLE_PATH . '/inc/media.php';
 
@@ -56,6 +51,11 @@ require_once IRVING_EXAMPLE_PATH . '/inc/sidebars.php';
 
 // Theme setup.
 require_once IRVING_EXAMPLE_PATH . '/inc/theme.php';
+
+// Theme options.
+require_once IRVING_EXAMPLE_PATH . '/inc/theme-options/branding.php';
+require_once IRVING_EXAMPLE_PATH . '/inc/theme-options/footer.php';
+require_once IRVING_EXAMPLE_PATH . '/inc/theme-options/header.php';
 
 // Users.
 require_once IRVING_EXAMPLE_PATH . '/inc/users.php';

@@ -2,7 +2,8 @@
   "name": "irving/container",
   "config": {
     "style": {
-      "background-color": "#d4d4db",
+      "background-color": "header.backgroundColor",
+      "color": "header.color",
       "padding": "2rem 0"
     }
   },
@@ -23,12 +24,22 @@
             {
               "name": "irving/container",
               "children": [
-                { "name": "irving/site-logo" },
                 {
-                  "name": "irving/bloginfo",
+                  "name": "irving/site-logo"
+                },
+                {
+                  "name": "irving/get-bloginfo",
                   "config": {
-                    "show": "description"
-                  }
+                    "key": "description"
+                  },
+                  "children": [
+                    {
+                      "name": "irving/text",
+                      "use_context": {
+                        "irving/bloginfo": "content"
+                      }
+                    }
+                  ]
                 }
               ]
             },

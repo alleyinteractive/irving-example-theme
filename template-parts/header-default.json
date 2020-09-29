@@ -1,0 +1,59 @@
+[
+  {
+    "name": "irving/container",
+    "config": {
+      "style": {
+        "background-color": "header.backgroundColor"
+      }
+    },
+    "children": [
+      {
+        "name": "irving/container",
+        "config": {
+          "max_width": "lg",
+          "style": {
+            "display": "flex",
+            "flex-direction": "row",
+            "justify-content": "space-between"
+          }
+        },
+        "children": [
+          {
+            "name": "irving/site-logo",
+            "config": {
+              "style": {
+                "padding": "1rem"
+              }
+            }
+          },
+          {
+            "name": "irving/site-menu",
+            "theme": "header_default",
+            "config": {
+              "location": "primary"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "irving/container",
+    "config": {
+      "tag": "nav",
+      "style": {
+        "justify-content": "space-around",
+        "overflow-x": "auto",
+        "margin-bottom": "2rem"
+      }
+    },
+    "children": [
+      {
+        "name": "irving/site-menu",
+        "config": {
+          "location": "secondary"
+        }
+      }
+    ]
+  }
+]
