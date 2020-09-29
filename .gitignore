@@ -52,6 +52,9 @@ Thumbs.db
 debug.log
 npm-debug.log
 
+# Composer
+vendor/
+
 # FE
 node_modules/
 build/
