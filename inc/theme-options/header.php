@@ -110,7 +110,7 @@ add_filter( 'wp_irving_setup_site_theme', __NAMESPACE__ . '\inject_header_option
  * @return array
  */
 function include_header_template_part( array $children, array $config, string $name ): array {
-	// Not in a sidebar context.
+	// Not in a header-wrapper context.
 	if ( 'irving/header-wrapper' !== $name ) {
 		return $children;
 	}
