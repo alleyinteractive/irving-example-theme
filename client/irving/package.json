@@ -1,0 +1,33 @@
+{
+  "name": "irving-example-theme-application",
+  "version": "1.0.0",
+  "description": "Irving Example Theme application.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "irving dev",
+    "build": "irving build",
+    "start": "irving start",
+    "link-all": "npm install && npx irving link-all",
+    "predev": "npx check-node-version --package"
+  },
+  "engines": {
+    "node": "12.16.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:alleyinteractive/irving-example-theme.git"
+  },
+  "author": "Alley",
+  "license": "ISC",
+  "dependencies": {
+    "@irvingjs/core": "^4.2.0-alpha.14",
+    "@irvingjs/integrations": "^4.1.0-alpha.2",
+    "@irvingjs/styled-components": "^4.2.0-alpha.14",
+    "@irvingjs/wp-admin-bar": "^4.0.0",
+    "lodash": "^4.17.20",
+    "react-icons": "^3.11.0"
+  },
+  "devDependencies": {
+    "check-node-version": "^4.0.3"
+  }
+}

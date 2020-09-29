@@ -1,7 +1,6 @@
 /* eslint max-len: 0 */
 import styled from 'styled-components';
-import get from 'lodash/get';
-import { siteTheme } from '@irvingjs/styled/utils'
+import { siteTheme } from '@irvingjs/styled/utils';
 
 // eslint-disable import/prefer-default-export.
 export const TextWrapper = styled.div`
