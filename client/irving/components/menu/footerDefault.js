@@ -1,32 +1,39 @@
 import styled from 'styled-components';
 import { siteTheme } from '@irvingjs/styled/utils';
 
+/* eslint-disable import/prefer-default-export */
 export const Wrapper = styled.div`
-  align-items: center;
   display: flex;
   font-family: ${siteTheme('header.fontFamily')};
-  justify-content: flex-end;
+  flex-direction: column;
   width: 100%;
 `;
 
 // Wrapper around the menu name.
 export const NameWrapper = styled.h3`
-  display: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
 `;
 
 export const Inner = styled.ol`
   display: flex;
+  flex-direction: column;
   list-style: none;
+  margin: 0;
+  padding: 0;
 `;
 
 export const ItemWrapper = styled.li`
   flex: 1 0 auto;
-  padding: 0 1.625rem;
+  margin-bottom: 0.2rem;
+  padding: 0;
 
   a {
     color: white;
+    display: block;
     font-size: 1rem;
-    font-weight: normal;
+    padding: 0 0 0.5rem 0;
     text-decoration: none;
   }
 
@@ -38,3 +45,4 @@ export const ItemWrapper = styled.li`
 export const Dropdown = styled.ol`
   display: none;
 `;
+/* eslint-enable */

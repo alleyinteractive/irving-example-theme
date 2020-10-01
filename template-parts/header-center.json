@@ -31,10 +31,18 @@
             ]
           },
           {
-            "name": "irving/site-logo",
-            "style": {
-              "display": "flex"
-            }
+            "name": "irving/link",
+            "config": {
+              "href": "/"
+            },
+            "children": [
+              {
+                "name": "irving/site-logo",
+                "style": {
+                  "display": "flex"
+                }
+              }
+            ]
           },
           {
             "name": "irving/link",

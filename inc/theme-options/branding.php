@@ -16,7 +16,7 @@ use WP_Irving\Theme_Options;
 /**
  * Register customizer controls.
  *
- * @param WP_Customize_Manager $wp_customize Cutomize object.
+ * @param WP_Customize_Manager $wp_customize Customize object.
  */
 function register_branding_controls( WP_Customize_Manager $wp_customize ) {
 

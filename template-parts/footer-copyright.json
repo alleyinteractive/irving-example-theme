@@ -1,0 +1,35 @@
+{
+  "name": "irving/container",
+  "config": {
+    "style": {
+      "background-color": "colors.brand.secondary",
+      "color": "white",
+      "font-family": "header.fontFamily",
+      "padding": "2rem 0"
+    }
+  },
+  "children": [
+    {
+      "name": "irving/container",
+      "config": {
+        "max_width": "lg"
+      },
+      "children": [
+        {
+          "name": "irving/provide-site-theme",
+          "config": {
+            "selector": "footer.copyright_text"
+          },
+          "children": [
+            {
+              "name": "irving/text",
+              "use_context": {
+                "irving/site-theme": "content"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
