@@ -8,7 +8,7 @@ export const ContainerWrapper = styled.div`
   display: flex;
   flex-direction: row;
   font-family: ${siteTheme('fonts.secondary')};
-  font-size: ${(props) => rem(siteTheme('fonts.secondary-typescale.10')(props))};
+  font-size: ${(props) => rem(siteTheme('fonts.secondary-typescale.10')(props))}; /* eslint-disable-line max-len */
   font-weight: ${siteTheme('fonts.weight.semiBold')};
   justify-content: flex-start;
   margin: auto;
