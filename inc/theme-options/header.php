@@ -46,7 +46,7 @@ function register_header_controls( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_setting(
 		'header_color_scheme',
 		[
-			'default'    => 'colors.brand.primary',
+			'default'    => 'colors.primary',
 			'capability' => 'edit_theme_options',
 			'type'       => 'theme_mod',
 		]
@@ -85,10 +85,10 @@ function register_header_controls( WP_Customize_Manager $wp_customize ) {
 			'section'  => 'header',
 			'settings' => 'header_color_scheme',
 			'type'     => 'select',
-			'default'  => 'colors.brand.primary',
+			'default'  => 'colors.primary',
 			'choices'  => [
-				'colors.brand.primary'   => __( 'Primary', 'irving-example' ),
-				'colors.brand.secondary' => __( 'Secondary', 'irving-example' ),
+				'colors.primary'   => __( 'Primary', 'irving-example' ),
+				'colors.secondary' => __( 'Secondary', 'irving-example' ),
 			],
 		]
 	);
@@ -111,9 +111,7 @@ add_action( 'customize_register', __NAMESPACE__ . '\register_header_controls' );
  * @return array
  */
 function inject_header_options( array $site_theme ): array {
-	$site_theme['header']['background_color'] = get_theme_mod( 'header_color_scheme' );
-	$site_theme['header']['font_family']      = get_theme_mod( 'header_font_family' );
-	$site_theme['header']['template_part']    = get_theme_mod( 'header_template_part' );
+	// $site_theme['variants']['irving/container']['header_wrapper']['template_part_slug'] = get_theme_mod( 'header_template_part' );
 	return $site_theme;
 }
-add_filter( 'wp_irving_setup_site_theme', __NAMESPACE__ . '\inject_header_options' );
+// add_filter( 'wp_irving_setup_site_theme', __NAMESPACE__ . '\inject_header_options' );

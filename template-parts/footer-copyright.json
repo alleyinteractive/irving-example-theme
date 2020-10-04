@@ -16,7 +16,7 @@
       },
       "children": [
         {
-          "name": "irving/provide-site-theme",
+          "name": "irving/site-theme-provider",
           "config": {
             "selector": "footer.copyright_text"
           },

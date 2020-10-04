@@ -77,4 +77,4 @@ function inject_footer_options( array $site_theme ): array {
 	);
 	return $site_theme;
 }
-add_filter( 'wp_irving_setup_site_theme', __NAMESPACE__ . '\inject_footer_options' );
+// add_filter( 'wp_irving_setup_site_theme', __NAMESPACE__ . '\inject_footer_options' );

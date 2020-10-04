@@ -1,0 +1,21 @@
+{
+  "defaults": {
+    "irving/header-wrapper": {
+      "template": "header-default",
+      "styles": {
+        "background-color": "white",
+        "color": "black",
+        "font-family": "Helvetica"
+      }
+    },
+    "irving/footer-wrapper": {
+      "copyright_text": "",
+      "template": "footer-default",
+      "styles": {
+        "background-color": "white",
+        "color": "black",
+        "font-family": "Helvetica"
+      }
+    }
+  }
+}

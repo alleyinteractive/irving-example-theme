@@ -6,14 +6,26 @@ import { IntegrationsManager } from '@irvingjs/integrations';
 import CoralTalkEmbed from 'components/coral';
 
 // Icons.
-import { FiSearch } from 'react-icons/fi';
+import {
+  FiCalendar,
+  FiMenu,
+  FiSearch,
+  FiUser,
+} from 'react-icons/fi';
 
 // Themes.
 import themes from 'themes.js';
 
+const iconComponentMap = {
+  'irving/calendar-icon': FiCalendar,
+  'irving/menu-icon': FiMenu,
+  'irving/search-icon': FiSearch,
+  'irving/user-icon': FiUser,
+}
+
 export default {
   ...createThemedComponentMap(themes),
-  'irving-icon/search': FiSearch,
+  ...iconComponentMap,
   'irving/admin-bar': AdminBar,
   'irving/coral': CoralTalkEmbed,
   'irving/integrations': IntegrationsManager,

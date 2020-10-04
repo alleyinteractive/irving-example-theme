@@ -4,7 +4,7 @@ import { siteTheme } from '@irvingjs/styled/utils';
 export const Wrapper = styled.div`
   align-items: center;
   display: flex;
-  font-family: ${siteTheme('header.fontFamily')};
+  font-family: ${siteTheme('variants.irving/menu.headerDefault.fontFamily')};
   justify-content: flex-end;
   width: 100%;
 `;

@@ -1,41 +1,23 @@
 {
-  "brand": {
-    "primary": "BC3855",
-    "secondary": "8f3b84"
-  },
-	"primary": {
-		"light": "#4791db",
-		"main": "#1976d2",
-		"dark": "#115293"
-	},
-	"secondary": {
-		"light": "#e33371",
-		"main": "#dc004e",
-		"dark": "#9a0036"
-	},
-	"error": {
-		"light": "#e57373",
-		"main": "#f44336",
-		"dark": "#d32f2f"
-	},
-	"warning": {
-		"light": "#ffb74d",
-		"main": "#ff9800",
-		"dark": "#f57c00"
-	},
-	"info": {
-		"light": "#64b5f6",
-		"main": "#2196f3",
-		"dark": "#1976d2"
-	},
-	"success": {
-		"light": "#81c784",
-		"main": "#4caf50",
-		"dark": "#388e3c"
-	},
-	"text": {
-		"primary": "rgba(0, 0, 0, 0.87)",
-		"secondary": "rgba(0, 0, 0, 0.54)",
-		"disabled": "rgba(0, 0, 0, 0.38)"
-	}
+  "primary": "#120852",
+  "secondary": "#CA3000",
+  "accent": "#FFDC2E",
+  "black": "#000000",
+  "white": "#FFFFFF",
+  "gray10": "#FAFAFA",
+  "gray20": "#ECECEC",
+  "gray30": "#D8D8D8",
+  "gray40": "#CCCCCC",
+  "gray50": "#6C6C6C",
+  "gray60": "#4C4C4C",
+  "gray70": "#333333",
+  "error": "#E53935",
+  "success": "#4CAF50",
+  "warning": "#FF6D00",
+  "social": {
+    "comment": "#101010",
+    "facebook": "#3B5998",
+    "reddit": "#FF4500",
+    "twitter": "#1DA1F2"
+  }
 }

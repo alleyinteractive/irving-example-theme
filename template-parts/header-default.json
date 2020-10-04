@@ -3,7 +3,7 @@
     "name": "irving/container",
     "config": {
       "style": {
-        "background-color": "header.backgroundColor"
+        "background-color": "variants.irving/container.headerWrapper.backgroundColor"
       }
     },
     "children": [

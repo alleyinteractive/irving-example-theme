@@ -1,0 +1,26 @@
+{
+  "irving/text": {
+    "heading": {
+      "color": "colors.black",
+      "font_family": "fonts.primary",
+      "font_size": "fonts.primaryTypescale.8"
+    },
+    "subheading": {
+      "color": "",
+      "font_size": "16"
+    }
+  },
+  "irving/menu": {
+    "header_default": {
+      "font_family": "fonts.standard.sansSerif"
+    }
+  },
+  "irving/container": {
+    "header_wrapper": {
+      "background_color": "colors.primary"
+    },
+    "footer_wrapper": {
+      "background_color": "colors.primary"
+    }
+  }
+}

@@ -4,9 +4,9 @@
       "name": "irving/header-wrapper",
       "children": [
         {
-          "name": "irving/provide-site-theme",
+          "name": "irving/site-theme-provider",
           "config": {
-            "selector": "header.template_part"
+            "selector": "templates.defaults.irving/header-wrapper.template"
           },
           "children": [
             {
@@ -26,12 +26,12 @@
       "name": "irving/footer-wrapper",
       "children": [
         {
-          "name": "template-parts/footer"
+          "name": "template-parts/footer-default"
         },
         {
-          "name": "irving/provide-site-theme",
+          "name": "irving/site-theme-provider",
           "config": {
-            "selector": "footer.template_part"
+            "selector": "templates.defaults.irving/footer-wrapper.enable_copyright_template"
           },
           "children": [
             {

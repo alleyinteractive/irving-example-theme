@@ -2,7 +2,7 @@
   "name": "irving/container",
   "config": {
     "style": {
-      "background-color": "header.backgroundColor",
+      "background-color": "variants.irving/container.footerWrapper.backgroundColor",
       "color": "white",
       "font-family": "header.fontFamily",
       "padding": "2rem 0"

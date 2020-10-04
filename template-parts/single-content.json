@@ -1,0 +1,15 @@
+[
+  {
+    "name": "irving/container",
+    "theme": "single_content",
+    "config": {
+      "max_width": "md"
+    },
+    "children": [
+      {
+        "name": "irving/post-content",
+        "theme": "html"
+      }
+    ]
+  }
+]

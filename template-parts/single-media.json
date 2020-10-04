@@ -1,0 +1,21 @@
+[
+  {
+    "name": "irving/container",
+    "config": {
+      "max_width": "lg",
+      "style": {
+        "margin-bottom": "1rem"
+      }
+    },
+    "children": [
+      {
+        "name": "irving/post-featured-media",
+        "theme": "single",
+        "config": {
+          "aspect_ratio": "16:9",
+          "object-fit": "fill"
+        }
+      }
+    ]
+  }
+]

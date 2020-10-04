@@ -88,8 +88,8 @@ add_action( 'customize_register', __NAMESPACE__ . '\register_branding_controls' 
  * @return array
  */
 function inject_branding( array $site_theme ): array {
-	$site_theme['colors']['brand']['primary']   = get_theme_mod( 'primary_color', '#BC3855' );
-	$site_theme['colors']['brand']['secondary'] = get_theme_mod( 'secondary_color', '#8f3b84' );
+	$site_theme['colors']['primary']   = get_theme_mod( 'primary_color', '#BC3855' );
+	$site_theme['colors']['secondary'] = get_theme_mod( 'secondary_color', '#8f3b84' );
 	return $site_theme;
 }
-add_filter( 'wp_irving_setup_site_theme', __NAMESPACE__ . '\inject_branding' );
+// add_filter( 'wp_irving_setup_site_theme', __NAMESPACE__ . '\inject_branding' );

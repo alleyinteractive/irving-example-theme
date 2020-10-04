@@ -1,0 +1,11 @@
+[
+  {
+    "name": "irving/container",
+    "config": {
+      "max_width": "lg"
+    },
+    "children": [
+      { "name": "template-parts/recirculation-module" }
+    ]
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "name": "irving/container",
+    "config": {
+      "max_width": "md",
+      "style": {
+        "margin-bottom": "1rem",
+        "padding": "1rem"
+      }
+    },
+    "children": [
+      {
+        "name": "irving/text",
+        "config": {
+          "content": "Share this",
+          "style": {
+            "display": "block",
+            "margin-bottom": "1rem"
+          }
+        }
+      },
+      {
+        "name": "irving/social-sharing",
+        "config": {
+          "platforms": [ "facebook", "twitter", "email" ],
+          "style": {
+            "margin-bottom": "1rem"
+          }
+        }
+      }
+    ]
+  }
+]

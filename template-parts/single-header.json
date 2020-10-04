@@ -1,0 +1,28 @@
+[
+  {
+    "name": "irving/container",
+    "config": {
+      "max_width": "md",
+      "style": {
+        "margin": "1rem auto",
+        "padding": "1rem"
+      }
+    },
+    "children": [
+      {
+        "name": "irving/post-title",
+        "theme": "heading",
+        "config": {
+          "tag": "h1"
+        }
+      },
+      {
+        "name": "irving/post-excerpt",
+        "theme": "subheading",
+        "config": {
+          "tag": "h2"
+        }
+      }
+    ]
+  }
+]
