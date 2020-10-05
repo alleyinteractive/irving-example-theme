@@ -6,18 +6,27 @@
         {
           "name": "irving/container",
           "config": {
-            "class_name": "entry-content post-228 homepage type-homepage status-publish hentry",
+            "class_name": "post-228 homepage type-homepage status-publish hentry",
+            "tag": "article",
             "style": {
               "padding": "2rem"
             }
           },
           "children": [
             {
-              "name": "irving/post-content",
-              "theme": "html",
+              "name": "irving/container",
               "config": {
-                "class_name": "ab-block-post-grid featuredpost aligncenter"
-              }
+                "class_name": "entry-content"
+              },
+              "children": [
+                {
+                  "name": "irving/post-content",
+                  "theme": "html",
+                  "config": {
+                    "class_name": "ab-block-post-grid featuredpost aligncenter"
+                  }
+                }
+              ]
             }
           ]
         }

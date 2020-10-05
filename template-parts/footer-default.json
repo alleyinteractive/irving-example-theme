@@ -1,6 +1,7 @@
 {
   "name": "irving/container",
   "config": {
+    "id": "footer-default",
     "style": {
       "background-color": "variants.irving/container.footerWrapper.backgroundColor",
       "color": "white",
