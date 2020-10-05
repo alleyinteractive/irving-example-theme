@@ -1,7 +1,9 @@
 [
   {
     "name": "irving/container",
+    "theme": "single_recirculation",
     "config": {
+      "id": "single-recirculation",
       "max_width": "lg"
     },
     "children": [

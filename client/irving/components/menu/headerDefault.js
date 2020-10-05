@@ -16,12 +16,13 @@ export const NameWrapper = styled.h3`
 
 export const Inner = styled.ol`
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
 `;
 
 export const ItemWrapper = styled.li`
   flex: 1 0 auto;
-  padding: 0 1.625rem;
+  padding: 1rem;
 
   a {
     color: white;

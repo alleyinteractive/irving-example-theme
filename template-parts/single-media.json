@@ -1,7 +1,9 @@
 [
   {
     "name": "irving/container",
+    "theme": "single_media",
     "config": {
+      "id": "single-media",
       "max_width": "lg",
       "style": {
         "margin-bottom": "1rem"

@@ -16,11 +16,12 @@
                   "before": [
                     {
                       "name": "irving/archive-title",
-                      "theme": "h2",
+                      "theme": "heading",
                       "config": {
                         "tag": "h2",
                         "style": {
-                          "margin-bottom": "1rem"
+                          "margin-bottom": "1rem",
+                          "padding": "1rem 0"
                         }
                       }
                     }

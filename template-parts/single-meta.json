@@ -3,6 +3,7 @@
     "name": "irving/container",
     "theme": "single_meta",
     "config": {
+      "id": "single-meta",
       "max_width": "md"
     },
     "children": [
