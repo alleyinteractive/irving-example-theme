@@ -20,7 +20,7 @@ php:
 # Specify when Travis should build.
 branches:
   only:
-    - production
+    - master
 
 cache:
   directories:
