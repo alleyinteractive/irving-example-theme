@@ -20,7 +20,7 @@
   "author": "Alley",
   "license": "ISC",
   "dependencies": {
-    "@irvingjs/core": "^4.2.0-alpha.21",
+    "@irvingjs/core": "^4.2.0-beta.0",
     "@irvingjs/integrations": "^4.1.0-alpha.2",
     "@irvingjs/styled-components": "^4.2.0-alpha.15",
     "@irvingjs/wp-admin-bar": "^4.0.0",
