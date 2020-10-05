@@ -31,7 +31,7 @@ cache:
 git:
   depth: 1
 
-jobs:
+matrix:
   fast_finish: true
   include:
     - env: WP_VERSION=latest PHP_LINT=1
