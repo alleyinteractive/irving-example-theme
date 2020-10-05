@@ -20,7 +20,7 @@ php:
 # Specify when Travis should build.
 branches:
   only:
-    - production
+    - master
 
 cache:
   directories:
@@ -31,7 +31,7 @@ cache:
 git:
   depth: 1
 
-matrix:
+jobs:
   fast_finish: true
   include:
     - env: WP_VERSION=latest PHP_LINT=1
