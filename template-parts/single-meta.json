@@ -1,0 +1,31 @@
+[
+  {
+    "name": "irving/container",
+    "theme": "single_meta",
+    "config": {
+      "id": "single-meta",
+      "max_width": "md"
+    },
+    "children": [
+      {
+        "name": "irving/user-icon"
+      },
+      {
+        "name": "irving/post-byline",
+        "theme": "single",
+        "config": {
+          "pre_text": ""
+        }
+      },
+      {
+        "name": "irving/calendar-icon"
+      },
+      {
+        "name": "irving/post-timestamp",
+        "config": {
+          "post_date_format": "F j, Y"
+        }
+      }
+    ]
+  }
+]

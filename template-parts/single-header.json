@@ -1,0 +1,32 @@
+[
+  {
+    "name": "irving/container",
+    "theme": "single_header",
+    "config": {
+      "id": "single-header",
+      "max_width": "md",
+      "style": {
+        "margin": "1rem auto",
+        "padding": "1rem"
+      }
+    },
+    "children": [
+      {
+        "name": "irving/post-title",
+        "theme": "heading",
+        "config": {
+          "id": "single-header__heading",
+          "tag": "h1"
+        }
+      },
+      {
+        "name": "irving/post-excerpt",
+        "theme": "subheading",
+        "config": {
+          "id": "single-header__subheading",
+          "tag": "h2"
+        }
+      }
+    ]
+  }
+]

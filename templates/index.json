@@ -8,7 +8,7 @@
           "config": {
             "max_width": "lg",
             "style": {
-              "margin-bottom": "1rem"
+              "margin": "1rem 0"
             }
           },
           "children": [

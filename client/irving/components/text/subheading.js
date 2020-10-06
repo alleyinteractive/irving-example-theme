@@ -4,7 +4,7 @@ import get from 'lodash/get';
 
 // eslint-disable import/prefer-default-export.
 export const TextWrapper = styled.div`
-  color: ${(props) => get(props, 'theme.colors.text.secondary')};
+  color: ${(props) => get(props, 'theme.colors.text.primary')};
   font-size: 1.25rem;
   line-height: 1.5rem;
   margin-bottom: .7rem;

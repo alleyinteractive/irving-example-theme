@@ -53,9 +53,9 @@ require_once IRVING_EXAMPLE_PATH . '/inc/sidebars.php';
 require_once IRVING_EXAMPLE_PATH . '/inc/theme.php';
 
 // Theme options.
-require_once IRVING_EXAMPLE_PATH . '/inc/theme-options/branding.php';
-require_once IRVING_EXAMPLE_PATH . '/inc/theme-options/footer.php';
-require_once IRVING_EXAMPLE_PATH . '/inc/theme-options/header.php';
+// require_once IRVING_EXAMPLE_PATH . '/inc/theme-options/branding.php';
+// require_once IRVING_EXAMPLE_PATH . '/inc/theme-options/footer.php';
+// require_once IRVING_EXAMPLE_PATH . '/inc/theme-options/header.php';
 
 // Users.
 require_once IRVING_EXAMPLE_PATH . '/inc/users.php';

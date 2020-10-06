@@ -1,14 +1,37 @@
 {
-	"body": {
-		"variant1": "Baskerville, \"Times New Roman\", Times, serif",
-		"variant2": "Garamond, \"Hoefler Text\", \"Times New Roman\", Times, serif",
-		"variant3": "Geneva, \"Lucida Sans\", \"Lucida Grande\", \"Lucida Sans Unicode\", Verdana, sans-serif",
-		"variant4": "GillSans, Calibri, Trebuchet, sans-serif"
-	},
-	"heading": {
-		"variant1": "Georgia, Times, ‘Times New Roman’, serif",
-		"variant2": "Palatino, ‘Palatino Linotype’, ‘Hoefler Text’, Times, ‘Times New Roman’, serif",
-		"variant3": "Tahoma, Verdana, Geneva",
-		"variant4": "Trebuchet, Tahoma, Arial, sans-serif"
-	}
+  "primary": "Georgia, Times, ‘Times New Roman’, serif",
+  "primary-typescale": {
+    "1": "12",
+    "2": "14",
+    "3": "16",
+    "4": "18",
+    "5": "21",
+    "6": "24",
+    "7": "28",
+    "8": "33",
+    "9": "42",
+    "10": "64"
+  },
+  "secondary": "Palatino, ‘Palatino Linotype’, ‘Hoefler Text’, Times, ‘Times New Roman’, serif",
+  "secondary-typescale": {
+    "1": "12",
+    "2": "14",
+    "3": "16",
+    "4": "18",
+    "5": "21",
+    "6": "24",
+    "7": "28",
+    "8": "33",
+    "9": "42",
+    "10": "64"
+  },
+  "body": "Garamond, \"Hoefler Text\", \"Times New Roman\", Times, serif",
+  "weight": {
+    "light": "300",
+    "normal": "400",
+    "medium": "500",
+    "semibold": "600",
+    "bold": "700",
+    "black": "900"
+  }
 }

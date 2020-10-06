@@ -14,10 +14,9 @@ use WP_Irving\Templates;
 use WP_Irving\Theme_Options;
 
 /**
- * Support for a fallback image that integrates with the
- * `irving/post-featured-image` component.
+ * Register customizer controls.
  *
- * @param WP_Customize_Manager $wp_customize Cutomize object.
+ * @param WP_Customize_Manager $wp_customize Customize object.
  */
 function register_header_controls( WP_Customize_Manager $wp_customize ) {
 
@@ -47,7 +46,15 @@ function register_header_controls( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_setting(
 		'header_color_scheme',
 		[
-			'default'    => 'colors.brand.primary',
+			'default'    => 'colors.primary',
+			'capability' => 'edit_theme_options',
+			'type'       => 'theme_mod',
+		]
+	);
+
+	$wp_customize->add_setting(
+		'header_font_family',
+		[
 			'capability' => 'edit_theme_options',
 			'type'       => 'theme_mod',
 		]
@@ -78,11 +85,20 @@ function register_header_controls( WP_Customize_Manager $wp_customize ) {
 			'section'  => 'header',
 			'settings' => 'header_color_scheme',
 			'type'     => 'select',
-			'default'  => 'colors.brand.primary',
+			'default'  => 'colors.primary',
 			'choices'  => [
-				'colors.brand.primary'   => __( 'Primary', 'irving-example' ),
-				'colors.brand.secondary' => __( 'Secondary', 'irving-example' ),
+				'colors.primary'   => __( 'Primary', 'irving-example' ),
+				'colors.secondary' => __( 'Secondary', 'irving-example' ),
 			],
+		]
+	);
+
+	$wp_customize->add_control(
+		'header_font_family',
+		[
+			'label'    => __( 'Font Family', 'irving-example' ),
+			'section'  => 'header',
+			'settings' => 'header_font_family',
 		]
 	);
 }
@@ -95,42 +111,7 @@ add_action( 'customize_register', __NAMESPACE__ . '\register_header_controls' );
  * @return array
  */
 function inject_header_options( array $site_theme ): array {
-	$site_theme['header']['background_color'] = get_theme_mod( 'header_color_scheme' );
+	// $site_theme['variants']['irving/container']['header_wrapper']['template_part_slug'] = get_theme_mod( 'header_template_part' );
 	return $site_theme;
 }
-add_filter( 'wp_irving_setup_site_theme', __NAMESPACE__ . '\inject_header_options' );
-
-/**
- * Filter the `irving/header-wrapper` component to implement conditional display
- * logic in various contexts.
- *
- * @param array  $children Children.
- * @param array  $config   Config.
- * @param string $name     Name.
- * @return array
- */
-function include_header_template_part( array $children, array $config, string $name ): array {
-	// Not in a header-wrapper context.
-	if ( 'irving/header-wrapper' !== $name ) {
-		return $children;
-	}
-
-	$template_part_slug = get_theme_mod( 'header_template_part' );
-	switch ( $template_part_slug ) {
-		case 'header-default':
-		default:
-			$children = Templates\hydrate_template_parts( [ 'name' => 'template-parts/header-default' ] );
-			break;
-
-		case 'header-center':
-			$children = Templates\hydrate_template_parts( [ 'name' => 'template-parts/header-center' ] );
-			break;
-
-		case 'header-search':
-			$children = Templates\hydrate_template_parts( [ 'name' => 'template-parts/header-search' ] );
-			break;
-	}
-
-	return $children;
-}
-add_filter( 'wp_irving_component_children', __NAMESPACE__ . '\include_header_template_part', 10, 3 );
+// add_filter( 'wp_irving_setup_site_theme', __NAMESPACE__ . '\inject_header_options' );

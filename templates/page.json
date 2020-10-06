@@ -4,59 +4,10 @@
       "name": "irving/body-wrapper",
       "children": [
         {
-          "name": "irving/container",
-          "config": {
-            "max_width": "md",
-            "style": {
-              "margin-bottom": "1rem"
-            }
-          },
-          "children": [
-            {
-              "name": "irving/post-title",
-              "theme": "h1",
-              "config": {
-                "tag": "h1"
-              }
-            },
-            {
-              "name": "irving/post-excerpt",
-              "theme": "h4",
-              "config": {
-                "tag": "h2"
-              }
-            }
-          ]
+          "name": "template-parts/single-header"
         },
         {
-          "name": "irving/container",
-          "config": {
-            "max_width": "lg",
-            "style": {
-              "margin-bottom": "1rem"
-            }
-          },
-          "children": [
-            {
-              "name": "irving/post-featured-media",
-              "config": {
-                "aspect_ratio": "16:9",
-                "object-fit": "fill"
-              }
-            }
-          ]
-        },
-        {
-          "name": "irving/container",
-          "config": {
-            "max_width": "md",
-            "style": {
-              "margin-bottom": "1rem"
-            }
-          },
-          "children": [
-            { "name": "irving/post-content" }
-          ]
+          "name": "template-parts/single-content"
         }
       ]
     }

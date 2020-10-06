@@ -1,0 +1,36 @@
+[
+  {
+    "name": "irving/container",
+    "theme": "single_footer",
+    "config": {
+      "id": "single-footer",
+      "max_width": "md",
+      "style": {
+        "border-top": "1px solid black",
+        "margin-bottom": "1rem",
+        "padding": "1rem"
+      }
+    },
+    "children": [
+      {
+        "name": "irving/text",
+        "config": {
+          "content": "Share this",
+          "style": {
+            "display": "block",
+            "margin-bottom": "1rem"
+          }
+        }
+      },
+      {
+        "name": "irving/social-sharing",
+        "config": {
+          "platforms": [ "facebook", "twitter", "email" ],
+          "style": {
+            "margin-bottom": "1rem"
+          }
+        }
+      }
+    ]
+  }
+]
