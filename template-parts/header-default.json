@@ -2,6 +2,7 @@
   {
     "name": "irving/container",
     "config": {
+      "id": "header-default",
       "style": {
         "background-color": "variants.irving/container.headerWrapper.backgroundColor"
       }
