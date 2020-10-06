@@ -20,7 +20,8 @@
           "name": "styled-css-grid/grid",
           "config": {
             "columns": "3fr 1fr 1fr 1fr",
-            "gap": "20px"
+            "gap": "20px",
+            "id": "footer__grid"
           },
           "children": [
             {
