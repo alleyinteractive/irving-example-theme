@@ -3,7 +3,7 @@
 	<description>PHP_CodeSniffer standard for Irving Example Theme.</description>
 
 	<!-- Include Alley Rules -->
-	<rule ref="alley-coding-standards">
+	<rule ref="Alley-Interactive">
 		<exclude-pattern>/tests/*</exclude-pattern>
 		<exclude-pattern>/inc/fields.php</exclude-pattern>
 	</rule>

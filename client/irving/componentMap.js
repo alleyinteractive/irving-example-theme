@@ -1,5 +1,8 @@
 import createThemedComponentMap from '@irvingjs/styled-components/componentMap';
-import AdminBar from '@irvingjs/wp-admin-bar';
+import {
+  AdminBar,
+  componentMap as wordpressComponentMap,
+} from '@irvingjs/wordpress';
 
 // Integrations.
 import { IntegrationsManager } from '@irvingjs/integrations';
@@ -12,6 +15,7 @@ import { FiSearch } from 'react-icons/fi';
 import themes from 'themes.js';
 
 export default {
+  ...wordpressComponentMap,
   ...createThemedComponentMap(themes),
   'irving-icon/search': FiSearch,
   'irving/admin-bar': AdminBar,

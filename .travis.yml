@@ -80,8 +80,7 @@ before_script:
   # Set up phpcs.
   - |
     if [[ "$WP_PHPCS" == "1" ]] ; then
-      composer global require automattic/vipwpcs
-      phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs,$HOME/.composer/vendor/automattic/vipwpcs
+      composer install
     fi
 
   - pwd
@@ -106,7 +105,7 @@ script:
   # @link http://pear.php.net/package/PHP_CodeSniffer/
   - |
     if [[ "$WP_PHPCS" == "1" ]] ; then
-      phpcs -n
+      composer run phpcs
     fi
 
   # Run the theme's unit tests, both in single and multisite.

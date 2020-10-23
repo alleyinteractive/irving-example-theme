@@ -20,10 +20,12 @@
   "author": "Alley",
   "license": "ISC",
   "dependencies": {
-    "@irvingjs/core": "^4.2.0-alpha.15",
-    "@irvingjs/integrations": "^4.1.0-alpha.2",
-    "@irvingjs/styled-components": "^4.2.0-alpha.15",
-    "@irvingjs/wp-admin-bar": "^4.0.0",
+    "@irvingjs/core": "latest",
+    "@irvingjs/integrations": "latest",
+    "@irvingjs/styled": "latest",
+    "@irvingjs/styled-components": "latest",
+    "@irvingjs/vip-go": "latest",
+    "@irvingjs/wordpress": "latest",
     "lodash": "^4.17.20",
     "react-icons": "^3.11.0"
   },
