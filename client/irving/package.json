@@ -11,7 +11,7 @@
     "predev": "npx check-node-version --package"
   },
   "engines": {
-    "node": "12.16.x"
+    "node": "12"
   },
   "repository": {
     "type": "git",
