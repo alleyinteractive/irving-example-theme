@@ -51,7 +51,7 @@
       {
         "name": "irving/site-menu",
         "config": {
-          "location": "secondary"
+          "location": "primary"
         }
       }
     ]
