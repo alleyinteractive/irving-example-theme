@@ -24,7 +24,7 @@ branches:
 
 cache:
   directories:
-    - $HOME/.composer/cache
+    - $HOME/.config/composer/cache
     - ./vendor
 
 # Git clone depth.
@@ -44,10 +44,10 @@ before_script:
   # Turn off Xdebug. See https://core.trac.wordpress.org/changeset/40138.
   - phpenv config-rm xdebug.ini || echo "Xdebug not available"
 
-  - export PATH="$HOME/.composer/vendor/bin:$PATH"
+  - export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
   # Couple the PHPUnit version to the PHP version.
-  - composer global require "phpunit/phpunit=6.1.*"
+  - composer global require "phpunit/phpunit=^7.5"
 
   - og_dir="$(pwd)"
   - theme_slug="$(basename $(pwd))"
