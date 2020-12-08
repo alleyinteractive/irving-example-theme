@@ -1,4 +1,4 @@
-# Travis CI (MIT License) configuration file for the Irving Twenty Twenty-One theme
+# Travis CI (MIT License) configuration file for the Irving Example theme
 # @link https://travis-ci.org/
 
 # Bionic image has PHP versions 7.1,7.2,7.3 pre-installed
@@ -20,7 +20,7 @@ php:
 # Specify when Travis should build.
 branches:
   only:
-    - main
+    - master
 
 cache:
   directories:
