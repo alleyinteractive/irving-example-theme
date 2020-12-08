@@ -1,14 +1,31 @@
 <?xml version="1.0"?>
-<ruleset name="Irving Example">
+<ruleset name="Irving Example Theme">
 	<description>PHP_CodeSniffer standard for Irving Example Theme.</description>
 
+    <!-- Attempt to read from a cache -->
+	<arg name="cache" value=".cache/phpcs-cache.json"/>
+
+	<!-- Check up to 20 files simultaneously -->
+	<arg name="parallel" value="20"/>
+
+	<!-- Set the memory limit to 256M.
+		 For most standard PHP configurations, this means the memory limit will temporarily be raised.
+		 Ref: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage#specifying-phpini-settings
+	-->
+	<ini name="memory_limit" value="256M"/>
+
 	<!-- Include Alley Rules -->
-	<rule ref="Alley-Interactive">
-		<exclude-pattern>/tests/*</exclude-pattern>
-		<exclude-pattern>/inc/fields.php</exclude-pattern>
+    <rule ref="Alley-Interactive" >
+		<include-pattern>/inc/irving.php</include-pattern>
+		<include-pattern>/components/*</include-pattern>
 	</rule>
 
-	<!-- Project customizations go here -->
+    <!-- Project customizations go here -->
+
+	<rule ref="WordPress">
+		<!-- Allow short ternary expressions -->
+		<exclude name="WordPress.PHP.DisallowShortTernary" />
+	</rule>
 
 	<rule ref="WordPress.WP.I18n">
 		<properties>
@@ -25,17 +42,14 @@
 	</rule>
 
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
-		<properties>
-			<property name="prefixes" type="array">
+        <properties>
+            <property name="prefixes" type="array">
 				<element value="irving_example"/>
-				<!-- Allow ai_get_template_part prefixes. -->
-				<element value="ai_"/>
-				<element value="AI_"/>
-				<element value="_ai_"/>
-			</property>
-		</properties>
+                <element value="Irving_Example"/>
+            </property>
+        </properties>
 		<exclude-pattern>/tests/bootstrap\.php</exclude-pattern>
-	</rule>
+    </rule>
 
 	<rule ref="Generic.PHP.ForbiddenFunctions">
 		<properties>
