@@ -1,4 +1,4 @@
-# Travis CI (MIT License) configuration file for Irving Example
+# Travis CI (MIT License) configuration file for the Irving Example theme
 # @link https://travis-ci.org/
 
 # Bionic image has PHP versions 7.1,7.2,7.3 pre-installed
@@ -24,19 +24,28 @@ branches:
 
 cache:
   directories:
-    - $HOME/.config/composer/cache
-    - ./vendor
+    - $HOME/.composer/cache
+    - .cache
 
 # Git clone depth.
 git:
   depth: 1
+  quiet: true
 
 jobs:
   fast_finish: true
   include:
-    - env: WP_VERSION=latest PHP_LINT=1
+    - name: "Current Stable WP + PHP"
+      env: WP_VERSION=latest PHPCS=1 WP_TRAVIS_OBJECT_CACHE=1
+    - name: "Canary WP + PHP"
+      env: WP_VERSION=trunk WP_TRAVIS_OBJECT_CACHE=1
+      php: 7.4
+  allow_failures:
     - env: WP_VERSION=trunk
-    - env: WP_VERSION=latest WP_PHPCS=1 WP_TRAVIS_OBJECT_CACHE=1
+
+before_install:
+  # Bail early if a git merge conflict is detected.
+  - bash bin/script-git-conflict-check.sh
 
 # Prepare your build for testing.
 # Failures in this section will result in build status 'errored'.
@@ -44,7 +53,7 @@ before_script:
   # Turn off Xdebug. See https://core.trac.wordpress.org/changeset/40138.
   - phpenv config-rm xdebug.ini || echo "Xdebug not available"
 
-  - export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+  - export PATH="${HOME}/.config/composer/vendor/bin:${PATH}"
 
   # Couple the PHPUnit version to the PHP version.
   - composer global require "phpunit/phpunit=^7.5"
@@ -61,16 +70,16 @@ before_script:
 
       # Maybe install memcached.
       if [[ "$WP_TRAVIS_OBJECT_CACHE" == "1" ]]; then
-        printf "\n" | pecl install --force memcached 1> /dev/null
-        curl https://raw.githubusercontent.com/tollmanz/wordpress-pecl-memcached-object-cache/584392b56dc4adbe52bd2c7b86f875e23a3e5f75/object-cache.php > $WP_CORE_DIR/wp-content/object-cache.php
+        printf "\n" | pecl install --force memcache 1> /dev/null
+        curl -s https://raw.githubusercontent.com/Automattic/wp-memcached/master/object-cache.php > "${WP_CORE_DIR}/wp-content/object-cache.php"
       fi
 
       # Set up the theme. This assumes that this repo name matches the theme name.
-      mkdir -p "${WP_CORE_DIR}wp-content/themes/$theme_slug"
-      cp -R . "${WP_CORE_DIR}wp-content/themes/$theme_slug/"
+      mkdir -p "${WP_CORE_DIR}/wp-content/themes/$theme_slug"
+      cp -R . "${WP_CORE_DIR}/wp-content/themes/$theme_slug/"
 
       # Hop into theme's directory.
-      cd ${WP_CORE_DIR}wp-content/themes/$theme_slug/
+      cd ${WP_CORE_DIR}/wp-content/themes/$theme_slug/
 
       # For debugging.
       which phpunit
@@ -79,8 +88,16 @@ before_script:
 
   # Set up phpcs.
   - |
-    if [[ "$WP_PHPCS" == "1" ]] ; then
+    if [[ "$PHPCS" == "1" ]] ; then
       composer install
+    fi
+
+  # Set up node_modules.
+  - |
+    if [[ "$WP_JS" == "1" ]] ; then
+      nvm install "$(jq -r '.engines.node' package.json)"
+      npm i -g npm@$(jq -r '.engines.npm' package.json)
+      npm ci
     fi
 
   - pwd
@@ -89,23 +106,16 @@ before_script:
 # Default is specific to project language.
 # All commands must exit with code 0 on success. Anything else is considered failure.
 script:
-  # Search for PHP syntax errors.
-  #
-  # Only need to run this once per PHP version.
+  # Sniff Coding Standards.
   - |
-    if [[ "$PHP_LINT" == "1" ]] ; then
-      find . -type "f" -iname "*.php" -not -path "./vendor/*" | xargs -L "1" php -l
+    if [[ "$PHPCS" == "1" ]] ; then
+      composer phpcs
     fi
 
-  # WordPress Coding Standards.
-  #
-  # These are the same across PHP and WordPress, so we need to run them only once.
-  #
-  # @link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards
-  # @link http://pear.php.net/package/PHP_CodeSniffer/
+  # Run the theme's JavaScript tests.
   - |
-    if [[ "$WP_PHPCS" == "1" ]] ; then
-      composer run phpcs
+    if [[ "$WP_JS" == "1" ]] ; then
+      npm run build
     fi
 
   # Run the theme's unit tests, both in single and multisite.

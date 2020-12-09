@@ -73,5 +73,5 @@ build/
 
 # misc
 .env*
-
+.cache/*
 npm-debug.log*
