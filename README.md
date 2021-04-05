@@ -5,8 +5,7 @@ The **Irving Example Theme**'s purpose is to demo Irving and WordPress working t
 It primarily contains examples of how to structure components in templates and template parts.
 
 ## Demo
-[See the theme in action](https://irving-production.herokuapp.com/).
-*(server may need to boot up, refresh if you see an error)*
+[See the theme in action](https://demo.irvingjs.com).
 
 ## Templates
 The templates in this theme use [WP Irving](https://github.com/alleyinteractive/wp-irving)'s implementation of the [Template Hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/). In a nutshell, files in `/templates/{template-name}.json` will be automatically loaded following the Template Hierarchy for a given WordPress route.
