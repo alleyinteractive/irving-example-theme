@@ -24,7 +24,7 @@ export const ItemWrapper = styled.li`
   a {
     color: white;
     font-size: 1rem;
-    font-weight: normal;
+    font-weight: 300;
     text-decoration: none;
   }
 

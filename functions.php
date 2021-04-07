@@ -12,6 +12,11 @@ namespace Irving_Example;
 define( 'IRVING_EXAMPLE_PATH', dirname( __FILE__ ) );
 define( 'IRVING_EXAMPLE_URL', get_template_directory_uri() );
 
+// Handle local dev port issues.
+if ( false !== strpos( site_url(), 'alley' ) ) {
+	remove_filter( 'template_redirect', 'redirect_canonical' );
+}
+
 // WordPress utilities.
 require_once IRVING_EXAMPLE_PATH . '/inc/class-wp-utils.php';
 

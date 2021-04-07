@@ -7,6 +7,6 @@ export const TextWrapper = styled.div`
   color: ${(props) => get(props, 'theme.colors.text.secondary')};
   font-size: 1.25rem;
   line-height: 1.5rem;
-  margin-bottom: .7rem;
+  margin-bottom: 0.7rem;
 `;
 // eslint-enable.
