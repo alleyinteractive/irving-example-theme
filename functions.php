@@ -23,11 +23,6 @@ if ( is_admin() ) {
 	require_once IRVING_EXAMPLE_PATH . '/inc/admin.php';
 }
 
-// wp-cli command.
-if ( WP_Utils::wp_cli() ) {
-	require_once IRVING_EXAMPLE_PATH . '/inc/cli.php';
-}
-
 // Manage static assets (js and css).
 require_once IRVING_EXAMPLE_PATH . '/inc/assets.php';
 
