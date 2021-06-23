@@ -25,7 +25,6 @@
     "@irvingjs/styled": "latest",
     "@irvingjs/styled-components": "latest",
     "@irvingjs/vip-go": "latest",
-    "@irvingjs/wordpress": "latest",
     "lodash": "^4.17.20",
     "react-icons": "^3.11.0"
   },

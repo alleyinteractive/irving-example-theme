@@ -31,6 +31,52 @@
         {
           "name": "irving/container",
           "config": {
+            "max_width": "md",
+            "style": {
+              "margin-bottom": "1rem"
+            }
+          },
+          "children": [
+            {
+              "name": "irving/button",
+              "children": [
+                {
+                  "name": "irving/text",
+                  "config": {
+                    "content": "Default Button"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "irving/button",
+              "theme": "design",
+              "children": [
+                {
+                  "name": "irving/text",
+                  "config": {
+                    "content": "Custom Button"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "irving/button",
+              "theme": "green",
+              "children": [
+                {
+                  "name": "irving/text",
+                  "config": {
+                    "content": "Green Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "irving/container",
+          "config": {
             "max_width": "lg",
             "style": {
               "margin-bottom": "1rem"
